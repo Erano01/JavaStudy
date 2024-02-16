@@ -12,5 +12,10 @@
 		<module>WebSocket</module>
 		<module>Networking</module>
 		<module>StreamAPI</module>
+		<module>ConcurrencyAPI</module>
+		<module>InputOutputAPI</module>
+		<module>JDBC</module>
+		<module>CollectionFramework</module>
+		<module>Generics</module>
 	</modules>
 </project>
