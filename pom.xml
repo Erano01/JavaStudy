@@ -17,5 +17,6 @@
 		<module>JDBC</module>
 		<module>CollectionFramework</module>
 		<module>Generics</module>
+		<module>GoFDesignPatterns</module>
 	</modules>
 </project>
