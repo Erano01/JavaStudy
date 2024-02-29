@@ -39,9 +39,6 @@ public class Application {
 		withoutStreamAPI();
 		withStreamAPI();
 		
-		Collector collector;
-		Function function;
-		Predicate predicate;
 	}
 	public static void withStreamAPI() {
         List<Sale> sales = List.of(
