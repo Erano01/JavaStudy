@@ -7,12 +7,11 @@
 		<artifactId>JavaStudy</artifactId>
 		<version>1.0</version>
 	</parent>
-	<artifactId>GoFDesignPatterns</artifactId>
+	<artifactId>DesignPatterns</artifactId>
 	<packaging>pom</packaging>
 	
 	<modules>
-		<module>CreationalPatterns</module>
-		<module>StructuralPatterns</module>
-		<module>BehavioralPatterns</module>
+		<module>GoF-ElementsOfReusableObject-Oriented</module>
+		<module>HeadFirst</module>
 	</modules>
 </project>
