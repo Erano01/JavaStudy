@@ -27,7 +27,7 @@ import java.util.stream.Stream;
  *{@link java.util.stream.Stream#sorted()} 
  *
  *terminal operation:
- *	Pupose: Initiates the operations in a Stream chain and produces a result.
+ *	Purpose: Initiates the operations in a Stream chain and produces a result.
  *	Effect on Stream: Returns the result of the operation and closes the Stream.
  *	Concurrency: May not support parallel operations, typically processes all elements sequentially.
  *terminal operation examples (include overload methods) -> 
@@ -37,11 +37,15 @@ import java.util.stream.Stream;
  *{@link java.util.stream.Stream#count()} 
  *
  *
- *Stream Interfaces:
- *	@see Stream interface
- *	@see IntStream interface
- *	@see LongStream interface
- *	@see DoubleStream interface
+ *Stream Interfaces: 
+ *	The Stream API gives your four interfaces.
+ *	@see Stream interface -> 
+ *		which you can use to define pipelines of operations on any kind of objects.
+ *
+ *	@see IntStream interface , @see LongStream interface, @see DoubleStream interface
+ * 	Number Related Streams ->  
+ * 		These three streams use primitive types for numbers instead of the wrapper types to avoid boxing and unboxing.
+ *  	They have almost the same methods as the methods defined in Stream
  **/
 
 public class Application {

@@ -18,5 +18,6 @@
 		<module>CollectionFramework</module>
 		<module>Generics</module>
 		<module>DesignPatterns</module>
+		<module>LambdaExpressions</module>
 	</modules>
 </project>
