@@ -1,10 +1,16 @@
-package me.erano.com.example02;
+package me.erano.com.streamapi.example02;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * 
+ * 
+ * 
+ * 
+ **/
 public class Application {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package me.erano.com.example01;
+package me.erano.com.streamapi.example01;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collector;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
+import java.util.stream.DoubleStream;
+import java.util.stream.Stream;
 /**
  *Stream API stands for map-reduce-filter algorithm.
  *for use mapping -> @see Function interface
@@ -31,6 +35,13 @@ import java.util.stream.Collector;
  *{@link java.util.stream.Stream#collect(Collector)}, 
  *{@link java.util.stream.Stream#reduce(java.util.function.BinaryOperator)}, 
  *{@link java.util.stream.Stream#count()} 
+ *
+ *
+ *Stream Interfaces:
+ *	@see Stream interface
+ *	@see IntStream interface
+ *	@see LongStream interface
+ *	@see DoubleStream interface
  **/
 
 public class Application {
@@ -38,7 +49,6 @@ public class Application {
 	public static void main(String[] args) {
 		withoutStreamAPI();
 		withStreamAPI();
-		
 	}
 	public static void withStreamAPI() {
         List<Sale> sales = List.of(
