@@ -1,4 +1,4 @@
-package me.erano.com.streamapi.example02;
+package me.erano.com.streamapi.example01;
 
 import java.util.Objects;
 
