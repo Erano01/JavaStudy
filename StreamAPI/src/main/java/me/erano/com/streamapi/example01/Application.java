@@ -82,7 +82,14 @@ import java.util.stream.Stream;
 public class Application {
 
 	public static void main(String[] args) {
-		
+		System.out.println("Printing simpleMapReduceFilterExampleWithoutStreamAPI():");
+		simpleMapReduceFilterExampleWithoutStreamAPI();
+		System.out.println("Printing simpleMapReduceFilterExampleWithStreamAPI():");
+		simpleMapReduceFilterExampleWithStreamAPI();
+		System.out.println("Printing causingInMemoryOverheadByAssigningIntermediateStreamsToStreamVariables():");
+		causingInMemoryOverheadByAssigningIntermediateStreamsToStreamVariables();
+		System.out.println("Printing causingInMemoryOverheadByAssigningIntermediateCollectionsToCollectionVariables():");
+		causingInMemoryOverheadByAssigningIntermediateCollectionsToCollectionVariables();
 	}
 	public static void simpleMapReduceFilterExampleWithoutStreamAPI() {
 		List<Sale> sales = List.of(
