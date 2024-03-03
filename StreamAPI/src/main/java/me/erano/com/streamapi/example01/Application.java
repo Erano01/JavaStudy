@@ -19,27 +19,6 @@ import java.util.stream.Stream;
  *for use filtering -> @see Predicate interface
  *for use reducing -> @see Collector interface
  *
- *intermediate operation: 
- *	Purpose: It is used to transform or filter the data stream on Stream. 
- *	Effect on Stream : It does not change the stream, it @returns a new Stream. It works sequentially with other intermediate operations in the chain.
- *	Concurrency: Supports parallel operations, processes operations individually.
- *intermediate operation examples (include overload methods) -> 
- *{@link java.util.stream.Stream#map(Function)} , 
- *{@link java.util.stream.Stream#filter(Predicate)}, 
- *{@link java.util.stream.Stream#distinct()}, 
- *{@link java.util.stream.Stream#sorted()} 
- *
- *terminal operation:
- *	Purpose: Initiates the operations in a Stream chain and produces a result.
- *	Effect on Stream: Returns the result of the operation and closes the Stream.
- *	Concurrency: May not support parallel operations, typically processes all elements sequentially.
- *terminal operation examples (include overload methods) -> 
- *{@link java.util.stream.Stream#forEach(java.util.function.Consumer)}, 
- *{@link java.util.stream.Stream#collect(Collector)}, 
- *{@link java.util.stream.Stream#reduce(java.util.function.BinaryOperator)}, 
- *{@link java.util.stream.Stream#count()} 
- *
- *
  *Stream Interfaces: 
  *	The Stream API gives your four interfaces.
  *	@see Stream interface -> 
