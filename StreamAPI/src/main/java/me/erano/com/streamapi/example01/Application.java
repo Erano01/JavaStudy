@@ -11,6 +11,7 @@ import java.util.stream.LongStream;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 /**
+ * 
  *Stream API stands for map-reduce-filter algorithm.
  *for use mapping -> @see Function interface
  *for use filtering -> @see Predicate interface
@@ -46,6 +47,31 @@ import java.util.stream.Stream;
  * 	Number Related Streams ->  
  * 		These three streams use primitive types for numbers instead of the wrapper types to avoid boxing and unboxing.
  *  	They have almost the same methods as the methods defined in Stream
+ *  
+ *  
+ * Why Collections returns Interfaces that extend the BaseStream interface instead of returning new Collection?:
+ * for example? :
+ *{ @code
+ * Collection<Integer> populations         = cities.map(city -> city.getPopulation());
+ * Collection<Integer> filteredPopulations = populations.filter(population -> population > 100_000);
+ * int sum = filteredPopulations.sum();
+ *}                   
+ * NO. The reason for this design choice is to ensure that the returned collection maintains a reference to the original collection,
+ *  allowing changes in one to be reflected in the other. This approach avoids unnecessary memory overhead and improves performance since
+ *  it doesn't involve creating a new collection.(thats why map(), filter(), reduce() methods in Stream interface)
+ *  
+ *  
+ * Why we shouldn't create Stream variables to store streams that we process?:
+ * { @code
+ * Stream<City> streamOfCities         = cities.stream();
+ * Stream<Integer> populations         = streamOfCities.map(city -> city.getPopulation());
+ * Stream<Integer> filteredPopulations = populations.filter(population -> population > 100_000);
+ * int sum = filteredPopulations.sum();
+ * }
+ * The Stream interface avoids creating intermediate structures to store mapped or filtered objects.
+ * Here the map() and filter() methods are still returning new streams. So for this code to work and be efficient, no data should be stored in these streams. The streams created in this code, streamOfCities, populations and filteredPopulations must all be empty objects.
+ * It leads to a very important property of streams:
+ * A stream is an object that does not store any data.
  **/
 
 public class Application {
