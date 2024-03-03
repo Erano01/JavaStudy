@@ -62,13 +62,14 @@ import java.util.stream.Stream;
  *  
  *  
  * Why we shouldn't create Stream variables to store streams that we process?:
+ * for example? :
  * { @code
  * Stream<City> streamOfCities         = cities.stream();
  * Stream<Integer> populations         = streamOfCities.map(city -> city.getPopulation());
  * Stream<Integer> filteredPopulations = populations.filter(population -> population > 100_000);
  * int sum = filteredPopulations.sum();
  * }
- * The Stream interface avoids creating intermediate structures to store mapped or filtered objects.
+ * No this is bad. The Stream interface avoids creating intermediate structures to store mapped or filtered objects.
  * Here the map() and filter() methods are still returning new streams. So for this code to work and be efficient, no data should be stored in these streams. The streams created in this code, streamOfCities, populations and filteredPopulations must all be empty objects.
  * It leads to a very important property of streams:
  * A stream is an object that does not store any data.
