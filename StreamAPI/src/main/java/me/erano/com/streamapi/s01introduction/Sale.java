@@ -1,4 +1,4 @@
-package me.erano.com.streamapi.example01;
+package me.erano.com.streamapi.s01introduction;
 
 import java.time.LocalDate;
 import java.util.Objects;

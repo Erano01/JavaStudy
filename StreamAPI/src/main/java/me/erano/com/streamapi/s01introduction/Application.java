@@ -1,4 +1,4 @@
-package me.erano.com.streamapi.example01;
+package me.erano.com.streamapi.s01introduction;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -15,12 +15,9 @@ import java.util.stream.Stream;
 /** @author Erano -> Muhammed Ali Sert
  * 
  *Stream API stands for map-reduce-filter algorithm.
- *for use mapping -> @see Function interface
- *for use filtering -> @see Predicate interface
- *for use reducing -> @see Collector interface
  *
  *Stream Interfaces: 
- *	The Stream API gives your four interfaces.
+ *	The Stream API gives your four interfaces. All of them extending @see BaseStream.
  *	@see Stream interface -> 
  *		which you can use to define pipelines of operations on any kind of objects.
  *
