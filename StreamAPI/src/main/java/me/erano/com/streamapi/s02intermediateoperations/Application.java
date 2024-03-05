@@ -84,6 +84,10 @@ public class Application {
 		mappingStreamsToIntSummaryStatisticsByUsingFunction();
 		System.out.print("Printing : filteringStreamsByUsingPredicate();: ");
 		filteringStreamsByUsingPredicate();
+		System.out.print("Printing : flatMappingOneToOneRelationsWithoutStream()");
+		flatMappingOneToOneRelationsWithoutStream();
+		System.out.print("Printing : flatMappingOneToOneRelationsWithStream()");
+		flatMappingOneToOneRelationsWithStream();
 	}
 	
 	public static void mappingStreamsByUsingFunctionWithoutTerminalOperation() {
@@ -91,21 +95,21 @@ public class Application {
 		Function<String, Integer> toLength = String::length;
 		Stream<Integer> ints = strings.stream()
 		                              .map(toLength);
-		System.out.println(ints);
+		System.out.println(" -> "+ints);
 	}
 	public static void mappingStreamsByUsingFunctionWithTerminalOperationCollect() {
 		List<String> strings = List.of("one", "two", "three", "four");
 		List<Integer> lengths = strings.stream()
 		                               .map(String::length)
 		                               .collect(Collectors.toList());
-		System.out.println("lengths = " + lengths);
+		System.out.println(" -> lengths = " + lengths);
 	}
 	public static void mappingStreamsToIntSummaryStatisticsByUsingFunction(){
 		List<String> strings = List.of("one", "two", "three", "four");
 		IntSummaryStatistics stats = strings.stream()
 		                                    .mapToInt(String::length)
 		                                    .summaryStatistics();
-		System.out.println("stats = " + stats);
+		System.out.println(" -> stats = " + stats);
 	}
 	public static void filteringStreamsByUsingPredicate() {
 		List<String> strings = List.of("one", "two", "three", "four");
@@ -113,7 +117,31 @@ public class Application {
 		                    .map(String::length)
 		                    .filter(length -> length == 3)
 		                    .count();
-		System.out.println("count = " + count);
+		System.out.println(" -> count = " + count);
+	}
+	public static void flatMappingOneToOneRelationsWithoutStream() {
+		List<State> states = List.of(
+				new State("State1",List.of(new City("Adana",1000),new City("Mersin",2000), new City("Gaziantep",3000))),
+				new State("State1",List.of(new City("Ankara",10000),new City("Istanbul",20000), new City("Izmir",10000)))
+				);
+		int totalPopulation = 0;
+		for (State state: states) {
+		    for (City city: state.getCities()) {
+		        totalPopulation += city.getPopulation();
+		    }
+		}
+		System.out.println("-> Total population = " + totalPopulation);
+	}
+	public static void flatMappingOneToOneRelationsWithStream() {
+		List<State> states = List.of(
+				new State("State1",List.of(new City("Adana",1000),new City("Mersin",2000), new City("Gaziantep",3000))),
+				new State("State1",List.of(new City("Ankara",10000),new City("Istanbul",20000), new City("Izmir",10000)))
+				);
+		int totalPopulation = 0;
+		for (State state: states) {
+			totalPopulation += state.getCities().stream().mapToInt(City::getPopulation).sum();
+		}
+		System.out.println(" -> Total population = " + totalPopulation);
 	}
 	
 }
