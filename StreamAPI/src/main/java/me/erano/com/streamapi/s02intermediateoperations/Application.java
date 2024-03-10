@@ -12,7 +12,7 @@ import java.util.stream.Stream;
  * @author Erano -> Muhammed Ali Sert 
  *
  *Functional Interfaces that Stream API uses:
- * mapping, flat-mapping, multi-mapping -> { @see Function, IntFunction, ToDoubleFunction, ToIntFunction, ToLongFunction, @see Consumer, BiConsumer } interfaces
+ * mapping(map(), mapMulti, )-> { @see Function, IntFunction, ToDoubleFunction, ToIntFunction, ToLongFunction, @see Consumer, BiConsumer } interfaces
  * filtering -> { @see Predicate, BiPredicate } interfaces
  * reducing -> { @see Collector, BinaryOperator } interfaces
  *
@@ -66,51 +66,74 @@ import java.util.stream.Stream;
  * 
  * 
  * Limiting and Skipping the Elements of a Stream ->
- * 
+ *  	skip(2).limit(5) -> 3,4,5,6,7
+ *  	skip(2).limit(8) -> 3,4,5,6,7,8,9,10
+ *  also u can use takeWhile(), dropWhile()
  * 
  * Concatenating Streams ->
+ * 		The Stream API offers several patterns to concatenate several streams into one. The most obvious way is to use a factory method 
+ * 		defined in the Stream interface: concat().
+ * 		This method takes two streams and produces a stream with the elements produced by the first stream, followed by the elements of the second stream.
+ * 		You may be wondering why this method does not take a vararg to allow for the concatenation of any number of streams.
+ * 		The reason is that using this method is OK as long as you have two streams to join. If you have more than two, then the JavaDoc API documentation
+ * 		advises you to use another pattern, based on the use of flatmap.
  * 
+ * 		The reason why it is better to use the flatMap() way is that concat() creates intermediates streams during the concatenation.
+ * 		When you use Stream.concat(), a new stream is created to concatenate your two streams. If you need to concatenate three streams,
+ * 		you will end up creating a first stream to handle the first concatenation, and a second one for the second concatenation. 
+ * 		So each concatenation requires a stream that will be thrown away very quickly.
+ * 
+ * 		With the flatmap pattern, you just create a single stream to hold all your streams and do the flatmap. The overhead is much lower.
+ * 		You may be wondering why these two patterns have been added. It looks like concat() is not really useful. In fact there is a subtle difference
+ * 		between the stream produced by the concat and the flatmap patterns.
+ * 		If the size of the source of the two streams you are concatenating is known, then the size of the resulting stream is known too. 
+ * 		In fact, it is simply the sum of the two concatenated streams.
+ * 		Using flatmap on a stream may create an unknown number of elements to be processed in the resulting stream. 
+ * 		The Stream API loses track of the number of elements that will be processed in the resulting stream.
+ * 		In other words: concat produces a SIZED stream, whereas flatmap does not.
  * 
  * Debugging Streams ->
- * 
+ * 		It may sometimes be convenient to examine the elements processed by a stream at run time. 
+ * 		The Stream API has a method for that: the peek() method. This method is meant to be used to debug your data processing pipeline.
+ * 		You should not use this method in your production code.
  *
  *intermediate operation: 
- *	Purpose: It is used to transform or filter the data stream on Stream. 
- *	Effect on Stream : It does not change the stream, it @returns a new Stream. It works sequentially with other intermediate operations in the chain.
- *	Concurrency: Supports parallel operations, processes operations individually.
+ *		Purpose: It is used to transform or filter the data stream on Stream. 
+ *		Effect on Stream : It does not change the stream, it @returns a new Stream. It works sequentially with other intermediate operations in the chain.
+ *		Concurrency: Supports parallel operations, processes operations individually.
  *intermediate operations -> 
- *	{@link java.util.stream.Stream#map(Function)}
- *	{@link java.util.stream.Stream#mapToDouble(java.util.function.ToDoubleFunction)}
- *	{@link java.util.stream.Stream#mapToInt(java.util.function.ToIntFunction)}
- *	{@link java.util.stream.Stream#mapToLong(java.util.function.ToLongFunction)}
- *	{@link java.util.stream.Stream#mapMulti(java.util.function.BiConsumer)}
- *	{@link java.util.stream.Stream#mapMultiToDouble(java.util.function.BiConsumer)}
- *	{@link java.util.stream.Stream#mapMultiToInt(java.util.function.BiConsumer)}
- *	{@link java.util.stream.Stream#mapMultiToLong(java.util.function.BiConsumer)}
- *	{@link java.util.stream.Stream#flatMap(Function)}
- *	{@link java.util.stream.Stream#flatMapToDouble(Function)}
- *	{@link java.util.stream.Stream#flatMapToInt(Function)}
- *	{@link java.util.stream.Stream#flatMapToLong(Function)}
- *	{@link java.util.stream.Stream#filter(Predicate)}
- *	{@link java.util.stream.Stream#parallel()}
- *	{@link java.util.stream.Stream#onClose(Runnable)}
- *	{@link java.util.stream.Stream#peek(java.util.function.Consumer)}
- *	{@link java.util.stream.Stream#sequential()}
- *	{@link java.util.stream.Stream#unordered()}
+ *		{@link java.util.stream.Stream#map(Function)}
+ *		{@link java.util.stream.Stream#mapToDouble(java.util.function.ToDoubleFunction)}
+ *		{@link java.util.stream.Stream#mapToInt(java.util.function.ToIntFunction)}
+ *		{@link java.util.stream.Stream#mapToLong(java.util.function.ToLongFunction)}
+ *		{@link java.util.stream.Stream#mapMulti(java.util.function.BiConsumer)}
+ *		{@link java.util.stream.Stream#mapMultiToDouble(java.util.function.BiConsumer)}
+ *		{@link java.util.stream.Stream#mapMultiToInt(java.util.function.BiConsumer)}
+ *		{@link java.util.stream.Stream#mapMultiToLong(java.util.function.BiConsumer)}
+ *		{@link java.util.stream.Stream#flatMap(Function)}
+ *		{@link java.util.stream.Stream#flatMapToDouble(Function)}
+ *		{@link java.util.stream.Stream#flatMapToInt(Function)}
+ *		{@link java.util.stream.Stream#flatMapToLong(Function)}
+ *		{@link java.util.stream.Stream#filter(Predicate)}
+ *		{@link java.util.stream.Stream#parallel()}
+ *		{@link java.util.stream.Stream#onClose(Runnable)}
+ *		{@link java.util.stream.Stream#peek(java.util.function.Consumer)}
+ *		{@link java.util.stream.Stream#sequential()}
+ *		{@link java.util.stream.Stream#unordered()}
  *Stateful intermediate operations ->
- *	{@link java.util.stream.Stream#distinct()}
- *	{@link java.util.stream.Stream#sorted()}
- *	{@link java.util.stream.Stream#dropWhile(Predicate)}
- *	{@link java.util.stream.Stream#skip(long)}
- *	{@link java.util.stream.Stream#sorted(java.util.Comparator)}
+ *		{@link java.util.stream.Stream#distinct()}
+ *		{@link java.util.stream.Stream#sorted()}
+ *		{@link java.util.stream.Stream#dropWhile(Predicate)}
+ *		{@link java.util.stream.Stream#skip(long)}
+ *		{@link java.util.stream.Stream#sorted(java.util.Comparator)}
  *Short-circuiting intermediate operations ->
- *	{@link java.util.stream.Stream#allMatch(Predicate)}
- *	{@link java.util.stream.Stream#anyMatch(Predicate)}
- *	{@link java.util.stream.Stream#findAny()}
- *	{@link java.util.stream.Stream#findFirst()}
- *	{@link java.util.stream.Stream#limit(long)}
- *	{@link java.util.stream.Stream#noneMatch(Predicate)}
- *	{@link java.util.stream.Stream#takeWhile(Predicate)}
+ *		{@link java.util.stream.Stream#allMatch(Predicate)}
+ *		{@link java.util.stream.Stream#anyMatch(Predicate)}
+ *		{@link java.util.stream.Stream#findAny()}
+ *		{@link java.util.stream.Stream#findFirst()}
+ *		{@link java.util.stream.Stream#limit(long)}
+ *		{@link java.util.stream.Stream#noneMatch(Predicate)}
+ *		{@link java.util.stream.Stream#takeWhile(Predicate)}
  * 
  * 
  * 
@@ -142,6 +165,17 @@ public class Application {
 		removingDuplicatesByStreamAPI();
         sortingElementsByStreamAPIWithoutComparator();
         sortingElementsByStreamAPIWithComparator();
+        
+        
+        System.out.println("----------------------");
+        System.out.print("Printing : limitingAndSkippingElements()");
+        limitingAndSkippingElements();
+        System.out.print("Printing : concatenatingStreamsPattern1()");
+        concatenatingStreamsPattern1();
+        System.out.print("Printing : concatenatingStreamsPattern2()");
+        concatenatingStreamsPattern2();
+        System.out.println("Printing : debuggingStreams()");
+        debuggingStreams();
 	}
 	
 	public static void mappingStreamsByUsingFunctionWithoutTerminalOperation() {
@@ -265,6 +299,50 @@ public class Application {
 
         System.out.println("Original List: " + wordsToSort);
         System.out.println("List after Sorting with Comparator: " + sortedWords);
+    }
+    public static void limitingAndSkippingElements() {
+    	List<Integer> ints = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
+    	//also u can use takeWhile(), dropWhile() instead of skipping and limiting. 
+    	List<Integer> result = 
+    	    ints.stream()
+    	        .skip(2)
+    	        .limit(5)
+    	        .collect(Collectors.toList());
+    	System.out.println(" -> result = " + result);
+    }
+    public static void concatenatingStreamsPattern1() {
+    	List<Integer> list0 = List.of(1, 2, 3);
+    	List<Integer> list1 = List.of(4, 5, 6);
+    	// 1st pattern: concat
+    	List<Integer> concat = 
+    	    Stream.concat(list0.stream(), list1.stream())
+    	          .collect(Collectors.toList());
+    	System.out.println(" -> concat  = " + concat);
+    }
+    public static void concatenatingStreamsPattern2() {
+    	List<Integer> list0 = List.of(1, 2, 3);
+    	List<Integer> list1 = List.of(4, 5, 6);
+    	List<Integer> list2 = List.of(7, 8, 9);
+    	// 2nd pattern: flatMap
+    	List<Integer> flatMap =
+    	    Stream.of(list0.stream(), list1.stream(), list2.stream())
+    	          .flatMap(Function.identity())
+    	          .collect(Collectors.toList());
+    	System.out.println(" -> flatMap = " + flatMap);
+    }
+    public static void debuggingStreams() {
+    	System.out.println(" *******DEBUGGING STREAMS PROCESS STARTED *******");
+    	List<String> strings = List.of("one", "two", "three", "four");
+    	List<String> result =
+    	        strings.stream()
+    	                .peek(s -> System.out.println("Starting with = " + s+ ", "))
+    	                .filter(s -> s.startsWith("t"))
+    	                .peek(s -> System.out.println("Filtered = " + s +", "))
+    	                .map(String::toUpperCase)
+    	                .peek(s -> System.out.println("Mapped = " + s + ", "))
+    	                .collect(Collectors.toList());
+    	System.out.println();
+    	System.out.println(" -> result = " + result);
     }
 	
 }
