@@ -1,5 +1,5 @@
 package me.erano.com.streamapi;
 
-public class Application {
+public class Info {
 
 }
