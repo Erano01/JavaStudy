@@ -34,10 +34,10 @@ import java.util.function.*;
  * 		A lambda expression is an implementation of the only abstract method in this functional interface
  * 
  * 3-)Implementing this method ->
- * 		java.util.function.Predicate ->
- * 		java.util.function.Consumer ->
- * 		java.util.function.Runnable ->
- * 
+ * 		java.util.function.Predicate -> test()
+ * 		java.util.function.Consumer -> accept()
+ * 		java.util.function.Runnable -> run()
+ * 		java.util.function.Comparator -> compare()
  * 
  * */
 public class Application {
