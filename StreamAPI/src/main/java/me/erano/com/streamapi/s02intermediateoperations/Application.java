@@ -26,7 +26,6 @@ import java.util.stream.Stream;
  * 	Filtering is about discarding some elements processed by a stream with a predicate.
  * 	This method is available on streams of objects and stream of primitive types.
  * 
- * 
  * Using Flatmap and MapMulti to Validate Elements Transformation ->
  * 	1->Flatmapping a Stream: 
  * 		In Java's Stream API, flatMap method is used to transform each element in a stream into another stream and 
@@ -134,10 +133,6 @@ import java.util.stream.Stream;
  *		{@link java.util.stream.Stream#limit(long)}
  *		{@link java.util.stream.Stream#noneMatch(Predicate)}
  *		{@link java.util.stream.Stream#takeWhile(Predicate)}
- * 
- * 
- * 
- * 
  **/
 public class Application {
 
