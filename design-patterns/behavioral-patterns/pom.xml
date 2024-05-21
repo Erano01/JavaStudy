@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>me.erano.com</groupId>
+    <artifactId>design-patterns</artifactId>
+    <version>1.0</version>
+  </parent>
+  <artifactId>behavioral-patterns</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>chain-of-responsibility</module>
+  	<module>command</module>
+  	<module>interpreter</module>
+  	<module>iterator</module>
+  	<module>mediator</module>
+  	<module>memento</module>
+  	<module>observer</module>
+  	<module>state</module>
+  	<module>strategy</module>
+  	<module>template-method</module>
+  	<module>visitor</module>
+  </modules>
+</project>

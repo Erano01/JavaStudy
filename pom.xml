@@ -10,5 +10,8 @@
 	<modules>
 		<module>stream-api</module>
 		<module>lambda-expressions</module>
+		<module>design-patterns</module>
+		<module>generics</module>
+		<module>regular-expressions</module>
 	</modules>
 </project>
