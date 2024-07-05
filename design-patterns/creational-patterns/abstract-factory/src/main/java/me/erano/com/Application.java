@@ -3,7 +3,7 @@ package me.erano.com;
 import me.erano.com.example1.Client;
 import me.erano.com.example1.abstract_factories.WidgetFactory;
 import me.erano.com.example1.concrete_factories.MotifWidgetFactory;
-import me.erano.com.example1.concrete_factories.PMWidgetFactory;
+import me.erano.com.example1.concrete_factories.PresentationManagerWidgetFactory;
 
 public class Application {
 
@@ -12,7 +12,7 @@ public class Application {
         Client motifClient = new Client(motifFactory);
         motifClient.renderUI();
 
-        WidgetFactory pmFactory = new PMWidgetFactory();
+        WidgetFactory pmFactory = new PresentationManagerWidgetFactory();
         Client pmClient = new Client(pmFactory);
         pmClient.renderUI();
     }
