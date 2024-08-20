@@ -1,6 +1,4 @@
-package me.erano.com.example1.concrete_products;
-
-import me.erano.com.example1.abstract_products.Window;
+package me.erano.com.example1.products;
 
 public class MotifWindow implements Window {
     @Override

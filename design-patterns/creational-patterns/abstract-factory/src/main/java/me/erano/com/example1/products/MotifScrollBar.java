@@ -1,6 +1,4 @@
-package me.erano.com.example1.concrete_products;
-
-import me.erano.com.example1.abstract_products.ScrollBar;
+package me.erano.com.example1.products;
 
 public class MotifScrollBar implements ScrollBar {
     @Override
