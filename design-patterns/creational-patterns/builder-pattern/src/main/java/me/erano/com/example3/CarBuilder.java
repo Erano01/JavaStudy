@@ -1,5 +1,6 @@
 package me.erano.com.example3;
 
+//concrete builder
 public class CarBuilder implements Builder {
 
     private int id;
