@@ -6,8 +6,11 @@ import java.awt.Font;
 public interface TextConverter {
 
 	void convertCharacter(char c);
-	
-	void convertFontChange(Font font);
-	
+
 	void convertParagraph();
+
+	void convertFontChange(String font);
+
+	Object getResult(); // This will return a specific Product type
+
 }

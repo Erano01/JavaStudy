@@ -1,13 +1,13 @@
 package me.erano.com;
 
-import java.time.LocalDate;
-
-import me.erano.com.example6.Address;
-import me.erano.com.example6.User;
-import me.erano.com.example6.Client;
-import me.erano.com.example6.UserDTO;
-
-
+import me.erano.com.example4.ASCIIConverter;
+import me.erano.com.example4.RTFReader;
+import me.erano.com.example4.TeXConverter;
+import me.erano.com.example4.TextConverter;
+import me.erano.com.example4.TextWidgetConverter;
+import me.erano.com.example4.product.ASCIIText;
+import me.erano.com.example4.product.TeXText;
+import me.erano.com.example4.product.TextWidget;
 
 public class Application {
 
@@ -40,7 +40,29 @@ public class Application {
 //        System.out.println(schemaBuilder.build());
         
 //      ex4
-        
+		//ASCII
+        TextConverter asciiConverter = new ASCIIConverter();
+        RTFReader reader = new RTFReader(asciiConverter);
+        reader.parseRTF("H e l l o FArial W o r l d P T h i s FTimes P");
+        ASCIIText asciiText = (ASCIIText) asciiConverter.getResult();
+        System.out.println("ASCII Text: ");
+        System.out.println(asciiText);
+
+        //TeXText
+        TextConverter texConverter = new TeXConverter();
+        RTFReader texReader = new RTFReader(texConverter);
+        texReader.parseRTF("H e l l o FArial W o r l d P T h i s FTimes P");
+        TeXText texText = (TeXText) texConverter.getResult();
+        System.out.println("TeX Text: ");
+        System.out.println(texText);
+
+        //TexWidget
+        TextConverter widgetConverter = new TextWidgetConverter();
+        RTFReader widgetReader = new RTFReader(widgetConverter);
+        widgetReader.parseRTF("H e l l o FArial W o r l d P T h i s FTimes P");
+        TextWidget textWidget = (TextWidget) widgetConverter.getResult();
+        System.out.println("Text Widget: ");
+        System.out.println(textWidget);
         
 //      ex5
 //		Client client = new Client();
@@ -62,21 +84,21 @@ public class Application {
 //        System.out.println(userDTO.getAddress());
         
 //      ex6
-        Client client =  new Client();
-		User user = new User();
-		user.setBirthday(LocalDate.of(2001, 1, 1));
-		user.setFirstName("Muhammed Ali");
-		user.setLastName("Sert");
-		Address address = new Address();
-		address.setHouseNumber("100");
-		address.setStreet("State street");
-		address.setCity("Example");
-		address.setState("New Jersey");
-		address.setZipcode("47998");
-		user.setAddress(address);
-		UserDTO userDTO= client.buildUser(UserDTO.getBuilder(), user);
-		System.out.println(userDTO.getName());
-		System.out.println(userDTO.getAge());
-		System.out.println(userDTO.getAddress());
+//        Client client =  new Client();
+//		User user = new User();
+//		user.setBirthday(LocalDate.of(2001, 1, 1));
+//		user.setFirstName("Muhammed Ali");
+//		user.setLastName("Sert");
+//		Address address = new Address();
+//		address.setHouseNumber("100");
+//		address.setStreet("State street");
+//		address.setCity("Example");
+//		address.setState("New Jersey");
+//		address.setZipcode("47998");
+//		user.setAddress(address);
+//		UserDTO userDTO= client.buildUser(UserDTO.getBuilder(), user);
+//		System.out.println(userDTO.getName());
+//		System.out.println(userDTO.getAge());
+//		System.out.println(userDTO.getAddress());
 	}
 }

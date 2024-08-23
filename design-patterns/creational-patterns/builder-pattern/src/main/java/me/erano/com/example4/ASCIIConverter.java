@@ -5,26 +5,27 @@ import java.awt.Font;
 import me.erano.com.example4.product.ASCIIText;
 
 //Concrete Builder
-public class ASCIIConverter implements TextConverter{
+//ASCIIConverter with font change handling
+public class ASCIIConverter implements TextConverter {
+	private ASCIIText asciiText = new ASCIIText();
 
 	@Override
 	public void convertCharacter(char c) {
-		
-	}
-
-	@Override
-	public void convertFontChange(Font font) {
-		
+		asciiText.append(c);
 	}
 
 	@Override
 	public void convertParagraph() {
-		
-	}
-	
-	public ASCIIText getASCIIText(){
-		return new ASCIIText();
+		asciiText.appendParagraph();
 	}
 
-	
+	@Override
+	public void convertFontChange(String font) {
+		// ASCII conversion ignores font changes
+	}
+
+	@Override
+	public ASCIIText getResult() {
+		return asciiText;
+	}
 }
