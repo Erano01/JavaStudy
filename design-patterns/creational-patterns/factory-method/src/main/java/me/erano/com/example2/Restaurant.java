@@ -11,6 +11,6 @@ public abstract class Restaurant {
 		return burger;
 	}
 	
-	//factory method
-	public abstract Burger createBurger();
+	//factory method -> making it protected is better implementation
+	protected abstract Burger createBurger();
 }

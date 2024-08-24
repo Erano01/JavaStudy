@@ -1,16 +1,17 @@
 package me.erano.com.example1;
 
 //Abstract Creator
-public interface Client {
+public abstract class Client {
 	
-	//factory method
-	Document createDocument();
+	//factory method -> We must delegate implementations to the sub classes
+	//and making factory method protected is better solution for uses of newDocument().
+	protected abstract Document createDocument();
 
-	default void openDocument(Document document) {
+	public void openDocument(Document document) {
 		document.open();
 	}
 	
-	default Document newDocument() {
+	public Document newDocument() {
 		return createDocument();
 	}
 	
