@@ -1,6 +1,6 @@
 package me.erano.com.example1;
 
-//Abstract Creator
+//Abstract Creator -> This can be also interface but protected factory method usage is better implementation.
 public abstract class Client {
 	
 	//factory method -> We must delegate implementations to the sub classes
