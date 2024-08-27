@@ -5,8 +5,7 @@ public class TextMessage extends Message{
 
 	@Override
 	public String getContent() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Text Message";
 	}
 
 	
