@@ -2,10 +2,11 @@ package me.erano.com;
 
 import java.util.AbstractCollection;
 
-import me.erano.com.example3.JSONMessageCreator;
-import me.erano.com.example3.MessageCreator;
-import me.erano.com.example3.TextMessageCreator;
-import me.erano.com.example3.product.Message;
+import me.erano.com.example4.Client;
+import me.erano.com.example4.creator.Figure;
+import me.erano.com.example4.creator.LineFigure;
+import me.erano.com.example4.creator.TextFigure;
+import me.erano.com.example4.product.Manipulator;
 
 public class Application {
 	
@@ -27,16 +28,29 @@ public class Application {
 //		Burger veggieBurger = veggieResto.orderBurger();
 		
 //		ex3
-		MessageCreator jsonCreator = new JSONMessageCreator();
-		Message jsonMsg = jsonCreator.getMessage();
-		System.out.println(jsonMsg.getContent());
-		
-		MessageCreator textCreator = new TextMessageCreator();
-		Message textMsg = textCreator.getMessage();
-		System.out.println(textMsg.getContent());
+//		MessageCreator jsonCreator = new JSONMessageCreator();
+//		Message jsonMsg = jsonCreator.getMessage();
+//		System.out.println(jsonMsg.getContent());
+//		
+//		MessageCreator textCreator = new TextMessageCreator();
+//		Message textMsg = textCreator.getMessage();
+//		System.out.println(textMsg.getContent());
 		
 //		ex4
-		
+		Figure lineFigure = new LineFigure();
+        Manipulator lineManipulator = lineFigure.createManipulator();
+
+        Figure textFigure = new TextFigure();
+        Manipulator textManipulator = textFigure.createManipulator();
+
+        Client client = new Client();
+        client.setManipulator(lineManipulator);
+        System.out.println("Performing manipulation with LineManipulator:");
+        client.performManipulation();
+
+        client.setManipulator(textManipulator);
+        System.out.println("\nPerforming manipulation with TextManipulator:");
+        client.performManipulation();
 		
 //		ex5
 		
