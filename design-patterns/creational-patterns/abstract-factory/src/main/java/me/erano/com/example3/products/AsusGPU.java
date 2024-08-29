@@ -1,5 +1,6 @@
 package me.erano.com.example3.products;
 
+//Concrete Product
 public class AsusGPU implements GPU{
 
 	@Override

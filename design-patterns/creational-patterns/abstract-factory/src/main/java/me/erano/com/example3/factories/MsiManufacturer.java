@@ -6,6 +6,7 @@ import me.erano.com.example3.products.Monitor;
 import me.erano.com.example3.products.MsiGPU;
 import me.erano.com.example3.products.MsiMonitor;
 
+//Concrete Factory
 public class MsiManufacturer extends Company {
 
     @Override

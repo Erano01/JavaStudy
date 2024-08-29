@@ -6,6 +6,7 @@ import me.erano.com.example3.products.AsusMonitor;
 import me.erano.com.example3.products.GPU;
 import me.erano.com.example3.products.Monitor;
 
+//Concrete Factory
 public class AsusManufacturer extends Company {
 
     @Override

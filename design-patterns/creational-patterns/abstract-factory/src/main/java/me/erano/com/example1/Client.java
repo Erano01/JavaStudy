@@ -9,16 +9,16 @@ import me.erano.com.example1.products.Window;
 // product 2 -> ScrollBar (PMScrollBar, MotifScrollBar)
 
 public class Client {
-//    private Window window;
-//    private ScrollBar scrollBar;
-//
-//    public Client(WidgetFactory factory) {
-//        this.window = factory.createWindow();
-//        this.scrollBar = factory.createScrollBar();
-//    }
-//
-//    public void renderUI() {
-//        window.render();
-//        scrollBar.scroll();
-//    }
+    private Window window;
+    private ScrollBar scrollBar;
+
+    public Client(WidgetFactory factory) {
+        this.window = factory.createWindow();
+        this.scrollBar = factory.createScrollBar();
+    }
+
+    public void renderUI() {
+        window.create();
+        scrollBar.create();
+    }
 }
