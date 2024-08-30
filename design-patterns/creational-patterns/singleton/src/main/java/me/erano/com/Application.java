@@ -28,5 +28,9 @@ public class Application {
 		RegistryEnum singletonEnum1 = RegistryEnum.INSTANCE;
 		RegistryEnum singletonEnum2 = RegistryEnum.INSTANCE;
 		System.out.println(singletonEnum1 == singletonEnum2);
+		
+//		java.lang.Runtime class in standard java API is a singleton example
+		//currentRuntime ve getRuntime() inceleyin
+		Runtime runtime;
 	}
 }
