@@ -5,6 +5,11 @@ public class Staff implements Graphic{
 
 	@Override
 	public Staff clone() throws CloneNotSupportedException {
-		return null;
+        return (Staff)super.clone();
 	}
+	
+	@Override
+    public String toString() {
+        return "Staff";
+    }
 }
