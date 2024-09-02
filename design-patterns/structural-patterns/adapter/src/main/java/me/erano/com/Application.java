@@ -39,6 +39,9 @@ public class Application {
 		Shape adapter = new TextShape(adaptee);
 		editorOperations += "\n" + editor.draw(adapter);
 		System.out.println(editorOperations);
+		
+//		ex4
+		//java.io.InputStreamReader and java.io.OutputStreamWriter classes are examples of object adapters.
 	}
 	
 	private static Employee populateEmployeeData(Employee employee) {
