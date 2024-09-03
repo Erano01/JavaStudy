@@ -42,6 +42,7 @@ public class Application {
 		
 //		ex4
 		//java.io.InputStreamReader and java.io.OutputStreamWriter classes are examples of object adapters.
+		//These classes adapt existing InputStream/OutputStream object to a Reader/Writer interface.
 	}
 	
 	private static Employee populateEmployeeData(Employee employee) {
