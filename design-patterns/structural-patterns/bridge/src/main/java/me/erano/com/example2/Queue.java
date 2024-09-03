@@ -3,7 +3,7 @@ package me.erano.com.example2;
 //refined abstraction
 public class Queue<T> implements FifoCollection<T>{
 
-	
+	//
 	private LinkedList<T> list;
 	
 	public Queue(LinkedList<T> list) {
