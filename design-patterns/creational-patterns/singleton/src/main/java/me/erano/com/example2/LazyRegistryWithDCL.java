@@ -4,6 +4,7 @@ import javax.management.InstanceAlreadyExistsException;
 
 import me.erano.com.example1.EagerRegistry;
 
+//Double-Checked Locking
 public class LazyRegistryWithDCL {
 
 	private LazyRegistryWithDCL() {

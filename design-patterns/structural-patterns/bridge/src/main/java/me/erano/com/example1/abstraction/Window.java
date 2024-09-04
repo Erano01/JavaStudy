@@ -1,8 +1,17 @@
-package me.erano.com.example1;
+package me.erano.com.example1.abstraction;
+
+import me.erano.com.example1.implementor.WindowImp;
 
 //Abstraction
-public interface Window {
+public abstract class Window {
 
-	void drawText();
-	void drawRect();
+	//maintains a reference to an object oftype Implementor.
+	protected WindowImp windowImp;
+	
+	protected Window(WindowImp windowImp) {
+		this.windowImp = windowImp;
+	}
+	
+	public abstract void drawText();
+	public abstract void drawRect();
 }

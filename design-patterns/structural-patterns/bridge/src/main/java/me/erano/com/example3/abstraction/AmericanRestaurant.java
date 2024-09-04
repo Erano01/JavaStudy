@@ -5,6 +5,7 @@ import me.erano.com.example3.implementator.Pizza;
 //Redefined Abstraction
 public class AmericanRestaurant extends Restaurant {
 
+	// normally we have this Pizza field inside of redefined abstraction class.
     public AmericanRestaurant(Pizza pizza) {
         super(pizza);
     }

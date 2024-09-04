@@ -1,5 +1,11 @@
 package me.erano.com;
 
+import me.erano.com.example1.abstraction.IconWindow;
+import me.erano.com.example1.abstraction.TransientWindow;
+import me.erano.com.example1.abstraction.Window;
+import me.erano.com.example1.implementor.PMWindowImp;
+import me.erano.com.example1.implementor.WindowImp;
+import me.erano.com.example1.implementor.XWindowImp;
 import me.erano.com.example2.FifoCollection;
 import me.erano.com.example2.Queue;
 import me.erano.com.example2.SinglyLinkedList;
@@ -14,6 +20,15 @@ public class Application {
 	public static void main(String[] args) {
 		
 //		ex1
+		WindowImp xWindowImp = new XWindowImp();
+		Window iconWindow = new IconWindow(xWindowImp);
+		iconWindow.drawRect();
+		iconWindow.drawText();
+		
+		WindowImp pmWindowImp = new PMWindowImp();
+		Window transientWindow = new TransientWindow(pmWindowImp);
+		transientWindow.drawRect();
+		transientWindow.drawText();
 		
 //		ex2
 		FifoCollection<Integer> collection = new Queue<>(new SinglyLinkedList<>());
@@ -33,6 +48,17 @@ public class Application {
 
         Restaurant italianRestaurant = new ItalianRestaurant(new VeggiePizza());
         italianRestaurant.deliver();
-		
+        
+//      ex4
+//      	an example of bridge pattern often given is the JDBC API. More specifically the java.sql.DriverManager(abstraction class) class
+//      	with the java.sql.Driver(implementor interface) interface form a bridge pattern.
+//			com.mysql.jdbc.Driver and oracle.jdbc.driver.Driver is concrete implementors.
+
+//      ex5
+//      	an example of bridge pattern often given is the Collections.newSetFromMap() method.
+//      	This method returns a Set which is backed by given map object.
+//        	see. 
+        
+        
 	}
 }
