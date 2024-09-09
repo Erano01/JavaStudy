@@ -7,6 +7,7 @@ import me.erano.com.example4.creator.Figure;
 import me.erano.com.example4.creator.LineFigure;
 import me.erano.com.example4.creator.TextFigure;
 import me.erano.com.example4.product.Manipulator;
+import me.erano.com.example5.Document;
 
 public class Application {
 	
@@ -53,15 +54,11 @@ public class Application {
         client.performManipulation();
 		
 //		ex5
-		
+        System.out.println("\n");
+		Document excelDocument = Document.createExcelDocument("Excel001");
+		System.out.println(excelDocument.toString());
 		
 //		ex6
-		
-		
-		
-		
-		
-		
 		
 		
 	}
