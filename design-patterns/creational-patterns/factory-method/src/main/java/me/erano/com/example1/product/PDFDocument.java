@@ -1,4 +1,4 @@
-package me.erano.com.example1;
+package me.erano.com.example1.product;
 
 //Concrete Product
 public class PDFDocument implements Document {

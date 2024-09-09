@@ -1,4 +1,7 @@
-package me.erano.com.example1;
+package me.erano.com.example1.creator;
+
+import me.erano.com.example1.product.Document;
+import me.erano.com.example1.product.PDFDocument;
 
 public class AdobeAcrobatClient extends Client{
 

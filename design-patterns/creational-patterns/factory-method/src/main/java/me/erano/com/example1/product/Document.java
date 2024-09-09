@@ -1,4 +1,4 @@
-package me.erano.com.example1;
+package me.erano.com.example1.product;
 
 //Our Product interface
 public interface Document {

@@ -1,4 +1,6 @@
-package me.erano.com.example1;
+package me.erano.com.example1.creator;
+
+import me.erano.com.example1.product.Document;
 
 //Abstract Creator -> This can be also interface but protected factory method usage is better implementation.
 public abstract class Client {
