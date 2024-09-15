@@ -13,5 +13,6 @@
 		<module>design-patterns</module>
 		<module>generics</module>
 		<module>regular-expressions</module>
+		<module>jax-rs</module>
 	</modules>
 </project>
