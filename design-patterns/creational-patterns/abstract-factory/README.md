@@ -31,7 +31,8 @@ Başka bir deyişle, Client'lerin yalnızca soyut bir sınıf tarafından tanım
 Bir WidgetFactory aynı zamanda somut widget sınıfları arasındaki bağımlılıkları da zorunlu kılar.
 MotifScrollBar ,MotifButton ve MotifTextEditor birlikte kullanılmalıdır ve bu kısıtlama MotifWidgetFactory kullanmanın sonucu olarak otomatik olarak gerçekleştirirlir.
 </p>
-![image](https://github.com/user-attachments/assets/d0d3c9e3-9ee1-4684-ae9b-8d6fcaeccdd8)
+![image](https://github.com/user-attachments/assets/82d6918c-5e6b-4081-85c7-c14611624888)
+
 
 
 <h3>Applicability</h3>
@@ -43,7 +44,8 @@ Abstract Factory Pattern'i şu durumlarda kullanın:
 • Productlar için sınıf kütüphanesi sağlamak istiyorsanız, ve sadece arayüzleri açıkça sunmak istiyorsanız, gerçekleştirmelerini değil.
 </p>
 <h3>Structure</h3>
-![image](https://github.com/user-attachments/assets/711f4856-b657-45c7-b9dc-6d057b8fed44)
+![image](https://github.com/user-attachments/assets/572def77-1ec8-408c-88e7-f126222796a9)
+
 
 
 <h3>Participants (katılımcılar)</h3>
