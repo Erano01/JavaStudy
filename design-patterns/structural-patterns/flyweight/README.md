@@ -1,11 +1,11 @@
-Flyweight
+<h1>Flyweight</h1>
 
-Intent
+<h3>Intent</h3>
 Çok sayıda fine-grained(ince taneli, küçük) nesneyi etkin/verimli bir şekilde sağlamak için paylaşmayı kullan.
 
 Flyweight = sinek siklet
 
-Motivation
+<h3>Motivation</h3>
 Bazı uygulamalar, dizaynları boyunca nesneleri kullanmaktan faydalanabilir, ancak naif bir gerçekleştirme aşırı derecede pahalı olacaktır.
 Örneğin, çoğu document editor gerçekleştirmesi, bir dereceye kadar modülerleştirilmiş text formatting ve editing olanaklarına sahiptir.
 Nesne yönelimli document editorler genellikle tablolar ve şekiller(tables and figures) gibi embedded elementleri temsil etmek için nesneleri kullanır.
@@ -53,7 +53,7 @@ Farklı karakter nesnelerinin sayısı document'daki karakter sayısından çok 
 Tüm karakterlerin aynı yazı tipi ve renkte göründüğü bir document, document'in uzunluğundan bağımsız olarak 100 karakter nesnesi (kabaca ASCII karakter kümesinin boyutu) mertebesinde yer ayırır.
 Ve çoğu document 10'dan fazla farklı yazı tipi-renk kombinasyonu kullanmadığından, bu sayı pratikte önemli ölçüde artmayacaktır. Böylece bir nesne soyutlaması her bir karakter için pratik hale gelir.
 
-Applicability
+<h3>Applicability</h3>
 Flyweight deseninin etkinliği büyük ölçüde nasıl ve nerede kullanıldığına bağlıdır. Aşağıdakilerin hepsi doğru olduğunda Flyweight desenini gerçekleştirin:
 • Bir uygulama yüksek sayıda nesne kullanıyorsa.
 • Depolama maliyetleri, nesnelerin çokluğu nedeniyle yüksekse.
@@ -61,7 +61,7 @@ Flyweight deseninin etkinliği büyük ölçüde nasıl ve nerede kullanıldığ
 • Dışsal durum(extrinsic state) kaldırıldığında, birçok nesne grubu nispeten az sayıda paylaşılan nesneyle değiştirilebiliyorsa.
 • Uygulama nesne kimliğine bağımlı değildir. Flyweight nesneleri paylaşılabileceğinden, kimlik(identity) testleri konsept olarak farklı nesneler için true döndürecektir.
 
-Structure
+<h3>Structure</h3>
 ![image](https://github.com/user-attachments/assets/068eca88-ea6e-4b61-a541-377857ac0c79)
 
 
@@ -70,7 +70,7 @@ Aşağıdaki nesne diagramı flyweight'lerin nasıl paylaşıldığını göster
 
 
 
-Participants
+<h3>Participants</h3>
 • Flyweight (Glyph)
    ◇ flyweight'ların dışsal(extrinsic) durumları alabileceği ve bu durumlara göre hareket edebileceği bir arayüz bildirir.
 • ConcreteFlyweight (Character)
@@ -84,11 +84,11 @@ Participants
    ◇ Flyweight'e(lerine) bir referans tutar
    ◇ Flyweight(ler)in dışsal(extrinsic) durumunu hesaplar veya depolar.
 
-Collaborations
+<h3>Collaborations</h3>
 Bir flyweight'inin fonksiyonelliğini yerine getirebilmesi için içsel(instrinsic) veya dışsal(extrinsic) olarak karakterize edilmesi gerekir.
 İçsel(instrinsic) durum ConcreteFlyweight nesnesinde saklanır; dışsal(extrinsic) durum Client nesneleri tarafından saklanır veya hesaplanır. Client'ler bu durumu flyweight'a, operasyonlarını çağırdıklarında geçerler.
 
-Consequences
+<h3>Consequences</h3>
 Flyweight'ler, özellikle daha önce içsel(instrinsic) durum olarak depolanmışsa, dışsal(extrinsic) durumu aktarma(transferring), bulma(finding) ve/veya hesaplama(computing) ile ilişkili runtime maliyetleri getirebilir.
 Ancak bu maliyetler, daha fazla flyweight paylaşıldıkça artan alan tasarruflarıyla telafi edilir.
 
