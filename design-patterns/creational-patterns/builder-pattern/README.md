@@ -77,19 +77,19 @@ Builder modelini gerçekleştirmenin temel sonuçları şunlardır:
 
 <h1>Wikipedia</h1>
 
-Problem that Builder pattern solves:
+<h3>Problem that Builder pattern solves:</h3>
 • Bir sınıf aynı inşa süreci ile kompleks bir nesnenin farklı sunumlarını nasıl yaratabilir?
 • Karmaşık bir nesne oluşturmayı içeren bir sınıf nasıl basitleştirilebilir?
 
 Karmaşık bir nesnenin parçalarını doğrudan bir sınıf içinde oluşturmak ve birleştirmek esnek değildir.
 Sınıfı, karmaşık nesnenin belirli bir sunumunu oluşturmaya zorlar ve sunumu daha sonra sınıftan bağımsız olarak (değiştirmek zorunda kalmadan) değiştirmeyi imkansız hale getirir.
 
-Benefit of Builder Pattern:
+<h3>Benefit of Builder Pattern:</h3>
 • Bir Product sınıfının internal(iç) sunumunu değiştirmenize olanak tanır.
 • İnşa (Construction) ve Sunum (Representation) için kodu encapsulate eder.
 • İnşaat sürecinin adımları üzerinde kontrol sağlar.
 
-Trade-Offs of Builder Pattern
+<h3>Trade-Offs of Builder Pattern</h3>
 • Product sınıflarının her bir tipi için belirli bir ConcreteBuilder oluşturulmalıdır.
 • Builder sınıfları mutable olmalıdır.
 • Dependency Enjection'u engelleyebilir/karmaşık hale getirebilir.
