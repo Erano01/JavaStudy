@@ -81,7 +81,7 @@ Prototype deseninin başlıca dezavantajı, Prototype'ın her subclassının Clo
 ---
 
 
-<h3>Implementation</h3>
+<h1>Implementation</h1>
 
 • Javada Cloneable arayüzünü gerçekleştirmek zorundayız. (Cloneable in-built ve marker arayüzdür)
 • clone() methodunu override etmemiz ve bu methodu gerçekleştirdiğimiz somut sınıfın kendi tipinde birşey döndürmeliyiz.
@@ -89,13 +89,13 @@ Prototype deseninin başlıca dezavantajı, Prototype'ın her subclassının Clo
 
 Not: Marker interface, herhangi bir method tanımlamayan ancak sınıfımızın kapasitesinin bir işareti veya göstergesi olarak hizmet eden bir arayüzdür. Diğer kodlara sınıfınızın klonlama işlemini desteklediğini söyleriz.
 
-Deep Copy:
+<h3>Deep Copy:</h3>
 Deep copy, bir nesnenin tamamen bağımsız bir kopyasını oluşturur. Bu, nesnenin kendisinin yanı sıra içindeki tüm iç içe geçmiş nesnelerin de kopyalanması anlamına gelir. Yani, kopyalanan nesne, orijinal nesneden tamamen bağımsızdır ve herhangi bir değişiklik, diğer nesneyi etkilemez.
 
-Shallow Copy: 
+<h3>Shallow Copy: </h3>
 Shallow copy, bir nesnenin yeni bir örneğini oluşturur, ancak bu nesnenin içindeki nesnelerin referanslarını kopyalar. Yani, yüzeysel kopyalama, yalnızca ilk seviye verileri kopyalar ve nesne içindeki herhangi bir diğer nesneye olan referansları aynı kalır. Bu, kopyalanan nesne ve orijinal nesnenin, iç içe geçmiş nesneleri paylaşacağı anlamına gelir.
 
-Implement Considerations
+<h3>Implement Considerations</h3>
 • Prototipinizin state'e sahipse veya bunlar prototip state'nizin bir parçasıysa ve immutable iseler, o zaman shallow copy yaparak idare edebilirsiniz çünkü bu nesneler değiştirilemezdir ve bir kopya aynı nesneleri işaret etmeye devam edebilir.
 • Prototipiniz mutable nesnelere sahipse deep copy kullanmalısınız.
 • Cloneable arayüzündeki clone methodu protected olarak gelir onu public yapmalısınız.
@@ -105,18 +105,18 @@ Implement Considerations
 • Prototipinizin durumu(state'i) çok sayıda değişebilir nesneden oluşuyorsa, prototipi uygulamak karmaşık bir süreç olabilir çünkü artık prototipinizin durumunda bulunan tüm bu değişebilir nesnelerin derin kopyasını sağlamanız gerekir.
 • Java'da varsayılan clone() methodu shallow copy'dir eğer deep copy istiyorsanız bunu kendiniz implement etmelisiniz.
 
-Not: 
+<h3>Not:</h3> 
 Java'da covariant return type özelliği, bir alt sınıfın, üst sınıfın bir metodunu geçersiz kılarken (override), o metodun dönüş türünü daha spesifik bir alt tür ile değiştirmesine olanak tanır.
 Normalde, bir alt sınıf bir üst sınıf metodunu geçersiz kılarken, o metodun dönüş türü, üst sınıfta tanımlanan dönüş türüyle aynı olmalıdır. Ancak, covariant return type sayesinde, alt sınıf metodu, üst sınıfta tanımlanan dönüş türünün alt türünü döndürebilir. Bu özellik, daha fazla esneklik sağlar ve alt sınıf nesneleriyle çalışırken daha uygun türlerin kullanılmasına olanak tanır.
 ![image](https://github.com/user-attachments/assets/5905967f-07eb-427e-83cb-96f94e924b46)
 
 
-Using Covariant return type feature for prototype pattern:
+<h3>Using Covariant return type feature for prototype pattern:</h3>
 ![image](https://github.com/user-attachments/assets/889165cc-9113-486c-939b-75bd305b7dea)
 
 
 
-Comparison Builder and Prototype Design Patterns
+<h3>Comparison Builder and Prototype Design Patterns</h3>
 
 • Builder
    ◇  Kompleks constructor ve builder'imiz vardır.
