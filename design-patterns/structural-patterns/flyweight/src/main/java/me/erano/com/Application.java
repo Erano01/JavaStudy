@@ -3,7 +3,7 @@ package me.erano.com;
 import java.util.List;
 import java.util.Random;
 
-import me.erano.com.example2.Store;
+import me.erano.com.example3.Column;
 import me.erano.com.example3.Glyph;
 import me.erano.com.example3.GlyphFactory;
 import me.erano.com.example3.Row;
@@ -37,22 +37,19 @@ public class Application {
 //        System.out.println("Total: " + ((BOOKS_TO_INSERT * 20 + BOOK_TYPES * 30) / 1024 / 1024) + "MB (instead of " + ((BOOKS_TO_INSERT * 50) / 1024 / 1024) + "MB)");
 		
 		//example3
-        GlyphFactory factory = new GlyphFactory();
-        Glyph a = factory.getCharacter('a');// Shared characters (flyweights)
+		GlyphFactory factory = new GlyphFactory();
+        Glyph a = factory.getCharacter('a'); // Shared flyweights
         Glyph b = factory.getCharacter('b');
         Glyph c = factory.getCharacter('c');
-        Row row = factory.createRow();// Unshared row
+        Row row = factory.createRow();// Unshared flyweights (rows and columns)
         row.add(a);
         row.add(b);
-        row.add(c);
-        row.draw("Times New Roman");// Drawing the row with different extrinsic states
-        row.draw("Arial");
+        Column column = factory.createColumn();
+        column.add(c);
         
-        //example4
-		
-		//example5
-		
-		//example6
+        row.draw("Times New Roman");// Drawing glyphs with extrinsic state (font)
+        column.draw("Arial");
+        
 	}
 	
 	private static String getRandomName() {

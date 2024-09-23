@@ -15,4 +15,7 @@ public class GlyphFactory {
     public Row createRow() {
         return new Row();
     }
+    public Column createColumn() {
+    	return new Column();
+    }
 }
