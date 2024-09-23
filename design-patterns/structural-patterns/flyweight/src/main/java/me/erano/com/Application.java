@@ -3,11 +3,10 @@ package me.erano.com;
 import java.util.List;
 import java.util.Random;
 
-import me.erano.com.example1.ErrorMessageFactory;
-import me.erano.com.example1.ErrorMessageFactory.ErrorType;
-import me.erano.com.example1.SystemErrorMessage;
-import me.erano.com.example1.UserBannedErrorMessage;
 import me.erano.com.example2.Store;
+import me.erano.com.example3.Glyph;
+import me.erano.com.example3.GlyphFactory;
+import me.erano.com.example3.Row;
 
 public class Application {
 	
@@ -25,22 +24,31 @@ public class Application {
 //		System.out.println(msg2.getText(null));
 		
 		//example2
-		Store store = new Store();
-        for (int i = 0; i < BOOKS_TO_INSERT / BOOK_TYPES; i++) {
-            store.storeBook(getRandomName(), getRandomPrice(), "Action", "Follett", "Stuff");
-            store.storeBook(getRandomName(), getRandomPrice(), "Fantasy", "Ingram", "Extra");
-        }
-//        store.displayBooks();
-        System.out.println(BOOKS_TO_INSERT + " Books Inserted");
-        System.out.println("==========================================");
-        System.out.println("Memory Usage: ");
-        System.out.println("Book Size (20 bytes) * " + BOOKS_TO_INSERT + " + BookTypes Size (30 bytes) * " + BOOK_TYPES + "");
-        System.out.println("==========================================");
-        System.out.println("Total: " + ((BOOKS_TO_INSERT * 20 + BOOK_TYPES * 30) / 1024 / 1024) + "MB (instead of " + ((BOOKS_TO_INSERT * 50) / 1024 / 1024) + "MB)");
+//		Store store = new Store();
+//        for (int i = 0; i < BOOKS_TO_INSERT / BOOK_TYPES; i++) {
+//            store.storeBook(getRandomName(), getRandomPrice(), "Action", "Follett", "Stuff");
+//            store.storeBook(getRandomName(), getRandomPrice(), "Fantasy", "Ingram", "Extra");
+//        }
+//        System.out.println(BOOKS_TO_INSERT + " Books Inserted");//        store.displayBooks();
+//        System.out.println("==========================================");
+//        System.out.println("Memory Usage: ");
+//        System.out.println("Book Size (20 bytes) * " + BOOKS_TO_INSERT + " + BookTypes Size (30 bytes) * " + BOOK_TYPES + "");
+//        System.out.println("==========================================");
+//        System.out.println("Total: " + ((BOOKS_TO_INSERT * 20 + BOOK_TYPES * 30) / 1024 / 1024) + "MB (instead of " + ((BOOKS_TO_INSERT * 50) / 1024 / 1024) + "MB)");
 		
 		//example3
-		
-		//example4
+        GlyphFactory factory = new GlyphFactory();
+        Glyph a = factory.getCharacter('a');// Shared characters (flyweights)
+        Glyph b = factory.getCharacter('b');
+        Glyph c = factory.getCharacter('c');
+        Row row = factory.createRow();// Unshared row
+        row.add(a);
+        row.add(b);
+        row.add(c);
+        row.draw("Times New Roman");// Drawing the row with different extrinsic states
+        row.draw("Arial");
+        
+        //example4
 		
 		//example5
 		
