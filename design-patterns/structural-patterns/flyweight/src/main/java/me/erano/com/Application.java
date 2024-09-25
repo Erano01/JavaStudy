@@ -50,6 +50,10 @@ public class Application {
         row.draw("Times New Roman");// Drawing glyphs with extrinsic state (font)
         column.draw("Arial");
         
+        //example 4
+        //java.lang.Integer, Short, Byte etc. Here the valueOf static method serves as the factory method.
+        //
+        
 	}
 	
 	private static String getRandomName() {
