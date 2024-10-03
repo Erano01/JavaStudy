@@ -6,4 +6,10 @@
     <version>1.0</version>
   </parent>
   <artifactId>facade</artifactId>
+
+  <properties>
+    <maven.compiler.source>23</maven.compiler.source>
+    <maven.compiler.target>23</maven.compiler.target>
+  </properties>
+
 </project>

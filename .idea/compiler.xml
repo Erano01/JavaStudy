@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="template-method" />
+        <module name="decorator" />
+        <module name="jax-rs" />
+        <module name="facade" />
+        <module name="flyweight" />
+        <module name="observer" />
+        <module name="factory-method" />
+        <module name="iterator" />
+        <module name="generics" />
+        <module name="composite" />
+        <module name="state" />
+        <module name="chain-of-responsibility" />
+        <module name="builder-pattern" />
+        <module name="singleton" />
+        <module name="adapter" />
+        <module name="memento" />
+        <module name="interpreter" />
+        <module name="prototype" />
+        <module name="command" />
+        <module name="lambda-expressions" />
+        <module name="abstract-factory" />
+        <module name="proxy" />
+        <module name="stream-api" />
+        <module name="bridge" />
+        <module name="mediator" />
+        <module name="strategy" />
+        <module name="visitor" />
+        <module name="regular-expressions" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
