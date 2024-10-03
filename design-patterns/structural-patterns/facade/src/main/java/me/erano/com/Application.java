@@ -1,5 +1,6 @@
 package me.erano.com;
 
+import me.erano.com.example1.Compiler;
 import me.erano.com.example2.EmailFacade;
 import me.erano.com.example2.Order;
 import me.erano.com.example3.BuyCryptoFacade;
@@ -9,7 +10,9 @@ public class Application {
 	public static void main(String[] args) {
 		
 //		ex1
-
+		Compiler compiler = new Compiler();
+		String sourceCode = "public class Main { public static void main(String[] args) { System.out.println(\"Hello World!\"); } }";
+		compiler.compile(sourceCode);
 
 //		ex2
 		Order order = new Order("101", 99.99);
