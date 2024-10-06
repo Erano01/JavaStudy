@@ -57,8 +57,9 @@ Proxy, basit bir pointerdan daha çok yönlü(versatile) veya sofistike bir nesn
 
 <h3>Participants</h3>
 
-<p>• Proxy (ImageProxy)</p>
-   ◇ Proxy gerçek subjecte erişmesine izin veren bir referansı barındırır. Proxy, RealSubject ve Subject arayüzleri aynıysa bir Subject'e başvurabilir.
+
+<td>• Proxy (ImageProxy)<
+   <tr>◇ Proxy gerçek subjecte erişmesine izin veren bir referansı barındırır. Proxy, RealSubject ve Subject arayüzleri aynıysa bir Subject'e başvurabilir.</tr>
    ◇ Proxy, Subject ile aynı olan bir arayüz sağlar böylece bir proxy, real subject yerine kullanılabilir.
    ◇ Proxy, real subject'e olan erişimi kontrol eder ve real subject'i oluşturmak ve silmekten sorumlu olabilir. 
    ◇ Diğer sorumluluklar proxy tipine bağlıdır:
@@ -66,9 +67,9 @@ Proxy, basit bir pointerdan daha çok yönlü(versatile) veya sofistike bir nesn
       ▪ virtual proxy'ler real subject hakkındaki ek bilgileri cache'leyebilir. Örneğin, Motivasyon'daki ImageProxy, gerçek görüntünün/resimin boyutlarını önbellekte saklar(cache'ler).
       ▪ protection proxy'ler çağıranın(caller) bir isteği gerçekleştirmek için gereken erişim izinlerine sahip olup olmadığını kontrol eder.
 
-<p>• Subject (Graphic)</p>
+• Subject (Graphic)
    ◇ RealSubject ve Proxy için ortak arayüzü tanımlar, böylece bir Proxy RealSubject'in beklendiği her yerde kullanılabilir.
-<p>• RealSubject (Image)</p>
+• RealSubject (Image)
    ◇ Proxy'nin sunduğu gerçek nesneyi tanımlar.
 
 // encode'lamak = farklı bir formata veya yapıya dönüştürme işlemidir
