@@ -58,7 +58,7 @@ Proxy, basit bir pointerdan daha çok yönlü(versatile) veya sofistike bir nesn
 <h3>Participants</h3>
 
 
-<td>• Proxy (ImageProxy)<
+<td>• Proxy (ImageProxy)</td>
    <tr>◇ Proxy gerçek subjecte erişmesine izin veren bir referansı barındırır. Proxy, RealSubject ve Subject arayüzleri aynıysa bir Subject'e başvurabilir.</tr>
    ◇ Proxy, Subject ile aynı olan bir arayüz sağlar böylece bir proxy, real subject yerine kullanılabilir.
    ◇ Proxy, real subject'e olan erişimi kontrol eder ve real subject'i oluşturmak ve silmekten sorumlu olabilir. 
