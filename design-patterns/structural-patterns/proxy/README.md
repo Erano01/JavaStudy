@@ -57,21 +57,26 @@ Proxy, basit bir pointerdan daha çok yönlü(versatile) veya sofistike bir nesn
 
 <h3>Participants</h3>
 
-
-<td>• Proxy (ImageProxy)</td>
-   <tr>◇ Proxy gerçek subjecte erişmesine izin veren bir referansı barındırır. Proxy, RealSubject ve Subject arayüzleri aynıysa bir Subject'e başvurabilir.</tr>
-   ◇ Proxy, Subject ile aynı olan bir arayüz sağlar böylece bir proxy, real subject yerine kullanılabilir.
-   ◇ Proxy, real subject'e olan erişimi kontrol eder ve real subject'i oluşturmak ve silmekten sorumlu olabilir. 
-   ◇ Diğer sorumluluklar proxy tipine bağlıdır:
-      ▪ remote proxy'ler bir isteği ve onun argümanlarını encode'lamak ve encode'lanmış isteği farklı bir adres alanındaki real subjecte göndermekten sorumludur.
-      ▪ virtual proxy'ler real subject hakkındaki ek bilgileri cache'leyebilir. Örneğin, Motivasyon'daki ImageProxy, gerçek görüntünün/resimin boyutlarını önbellekte saklar(cache'ler).
-      ▪ protection proxy'ler çağıranın(caller) bir isteği gerçekleştirmek için gereken erişim izinlerine sahip olup olmadığını kontrol eder.
-
-• Subject (Graphic)
-   ◇ RealSubject ve Proxy için ortak arayüzü tanımlar, böylece bir Proxy RealSubject'in beklendiği her yerde kullanılabilir.
-• RealSubject (Image)
-   ◇ Proxy'nin sunduğu gerçek nesneyi tanımlar.
-
+<ul>
+<li>• Proxy (ImageProxy)</li>
+   <ul>
+   <li>◇ Proxy gerçek subjecte erişmesine izin veren bir referansı barındırır. Proxy, RealSubject ve Subject arayüzleri aynıysa bir Subject'e başvurabilir.</li>
+   <li>◇ Proxy, Subject ile aynı olan bir arayüz sağlar böylece bir proxy, real subject yerine kullanılabilir.</li>
+   <li>◇ Proxy, real subject'e olan erişimi kontrol eder ve real subject'i oluşturmak ve silmekten sorumlu olabilir. </li>
+   <li>◇ Diğer sorumluluklar proxy tipine bağlıdır:</li></ul><ul>
+      <li>▪ remote proxy'ler bir isteği ve onun argümanlarını encode'lamak ve encode'lanmış isteği farklı bir adres alanındaki real subjecte göndermekten sorumludur.</li>
+      <li>▪ virtual proxy'ler real subject hakkındaki ek bilgileri cache'leyebilir. Örneğin, Motivasyon'daki ImageProxy, gerçek görüntünün/resimin boyutlarını önbellekte saklar(cache'ler).</li>
+      <li>▪ protection proxy'ler çağıranın(caller) bir isteği gerçekleştirmek için gereken erişim izinlerine sahip olup olmadığını kontrol eder.</li>
+</ul>
+<li>• Subject (Graphic)</li>
+<ul>
+   <li>◇ RealSubject ve Proxy için ortak arayüzü tanımlar, böylece bir Proxy RealSubject'in beklendiği her yerde kullanılabilir.</li>
+</ul>
+<li>• RealSubject (Image)</li>
+   <ul>
+  <li> ◇ Proxy'nin sunduğu gerçek nesneyi tanımlar.</li>
+   </ul>
+</ul>
 // encode'lamak = farklı bir formata veya yapıya dönüştürme işlemidir
 
 <h3>Collaborations</h3>
