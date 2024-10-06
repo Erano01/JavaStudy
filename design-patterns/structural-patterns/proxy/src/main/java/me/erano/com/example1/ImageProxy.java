@@ -5,7 +5,7 @@ import java.awt.geom.Point2D;
 //Proxy
 public class ImageProxy implements Graphic{
 
-    private String name;
+    private final String name;
 
     private Image image;
 
