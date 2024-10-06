@@ -2,7 +2,6 @@ package me.erano.com;
 
 import me.erano.com.example1.Graphic;
 import me.erano.com.example1.GraphicFactory;
-import me.erano.com.example1.Image;
 
 import java.awt.geom.Point2D;
 
@@ -10,7 +9,7 @@ public class Application {
 
     //there are 4 type of proxy pattern ->
     // 1-Remote Proxy, 2-Virtual Proxy, 3-Protection Proxy, 4-Smart Reference Proxy
-    // 5- Dynamic Proxy???
+    // 5- Dynamic Proxy??? -> java.lang.reflect.InvocationHandler
     public static void main(String[] args) {
 
 //        ex1 -> we used virtual proxy.
