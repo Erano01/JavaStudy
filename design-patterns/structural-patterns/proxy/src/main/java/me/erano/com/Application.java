@@ -12,7 +12,7 @@ public class Application {
     // 5- Dynamic Proxy??? -> java.lang.reflect.InvocationHandler
     public static void main(String[] args) {
 
-//        ex1 -> we used virtual proxy.
+//        ex1 -> virtual proxy.
         Graphic img = GraphicFactory.getImage("A1.bmp");
 
         img.setLocation(new Point2D() {
@@ -35,9 +35,13 @@ public class Application {
         System.out.println("rendering image now.....");
         img.render();
 
-//        ex2
+//        ex2 -> Remote Proxy
 
-//        ex3
+//        ex3 -> Protection Proxy
+
+//        ex4 -> Smart Reference Proxy
+
+//        ex5 -> Dynamic Proxy
 
 
     }
