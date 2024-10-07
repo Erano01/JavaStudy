@@ -1,6 +1,6 @@
 package me.erano.com.example1;
 
-import java.awt.geom.Point2D;
+import me.erano.com.example1.Point2D;
 
 //Proxy
 public class ImageProxy implements Graphic{

@@ -2,8 +2,9 @@ package me.erano.com;
 
 import me.erano.com.example1.Graphic;
 import me.erano.com.example1.GraphicFactory;
+import me.erano.com.example1.Point2D;
+import me.erano.com.example5.DynamicGraphicFactory;
 
-import java.awt.geom.Point2D;
 
 public class Application {
 
@@ -13,27 +14,12 @@ public class Application {
     public static void main(String[] args) {
 
 //        ex1 -> virtual proxy.
-        Graphic img = GraphicFactory.getImage("A1.bmp");
+        Graphic graphic = GraphicFactory.getImage("A1.bmp");
 
-        img.setLocation(new Point2D() {
-            @Override
-            public double getX() {
-                return 10;
-            }
-
-            @Override
-            public double getY() {
-                return 10;
-            }
-
-            @Override
-            public void setLocation(double x, double y) {
-
-            }
-        });
-        System.out.println("Image location :"+img.getLocation());
+        graphic.setLocation(new Point2D(10,10));
+        System.out.println("Image location :"+graphic.getLocation());
         System.out.println("rendering image now.....");
-        img.render();
+        graphic.render();
 
 //        ex2 -> Remote Proxy
 
@@ -42,7 +28,13 @@ public class Application {
 //        ex4 -> Smart Reference Proxy
 
 //        ex5 -> Dynamic Proxy
+        System.out.println("*****************************");
+        System.out.println("Dynamic Proxy -> "+"\n");
+        Graphic graphic1 = DynamicGraphicFactory.getImage("A.bmp");
+        graphic1.setLocation(new Point2D(-10,0));
+        System.out.println(graphic1.getLocation());
 
+        graphic1.render();
 
     }
 }
