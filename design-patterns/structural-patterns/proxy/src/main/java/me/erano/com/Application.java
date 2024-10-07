@@ -36,5 +36,15 @@ public class Application {
 
         graphic1.render();
 
+        // hibernate uses proxy to load collections of value types. For example,
+        // when you mapping your entities sometimes u can use Collection so in that situation
+        // field you marked as candidate for lazy loading will be handled one of hibernates virtual proxy.
+
+        // Spring framework also uses proxy pattern to provide support for features like transaction,
+        // caching and general AOP support.
+
+        //Hibernate & Spring both can create proxies for classes which do not implement any interface.
+        //They use third party frameworks like cglib, aspectJ to create dynamic proxies
+        // (remember, Java's dynamic proxy needs interface) at runtime.
     }
 }
