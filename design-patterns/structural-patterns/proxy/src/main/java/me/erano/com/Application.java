@@ -32,7 +32,7 @@ public class Application {
         System.out.println("Dynamic Proxy -> "+"\n");
         Graphic graphic1 = DynamicGraphicFactory.getImage("A.bmp");
         graphic1.setLocation(new Point2D(-10,0));
-        System.out.println(graphic1.getLocation());
+        System.out.println(graphic1.getLocation()); //returns null
 
         graphic1.render();
 

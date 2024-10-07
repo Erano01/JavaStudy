@@ -1,5 +1,6 @@
 package me.erano.com.example5;
 
+import me.erano.com.example1.Graphic;
 import me.erano.com.example1.Image;
 import me.erano.com.example1.Point2D;
 import java.lang.reflect.InvocationHandler;
@@ -22,11 +23,11 @@ public class ImageInvocationHandler implements InvocationHandler{
 	// Static block to initialize Method objects for caching
 	static {
 		try {
-			setLocationMethod = Image.class.getMethod("setLocation", Point2D.class);
-			getLocationMethod = Image.class.getMethod("getLocation");
-			renderMethod = Image.class.getMethod("render");
+			setLocationMethod = Graphic.class.getMethod("setLocation", Point2D.class);
+			getLocationMethod = Graphic.class.getMethod("getLocation");
+			renderMethod = Graphic.class.getMethod("render");
 		} catch (NoSuchMethodException e) {
-			throw new RuntimeException("Method not found: " + e.getMessage());
+			throw new NoSuchMethodError(e.getMessage());
 		}
 	}
 
@@ -34,7 +35,6 @@ public class ImageInvocationHandler implements InvocationHandler{
 		this.filename = filename;
 	}
 
-	// Core invocation method for handling method calls on the proxy
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		System.out.println("Invoking method: " + method.getName());
@@ -50,50 +50,38 @@ public class ImageInvocationHandler implements InvocationHandler{
 		return null; // For any other methods, return null
 	}
 
-	// Lazily create the real Image object when needed
-	private void createImageIfNecessary() {
+	private Object handleRender() {
 		if (image == null) {
+			System.out.println("Creating Image object for the first time.");
 			image = new Image(filename);
-			// Apply the stored location to the newly created image (if location was set earlier)
 			if (location != null) {
+				System.out.println("Setting location to newly created Image: " + location);
 				image.setLocation(location);
 			}
 		}
-	}
-
-	// Handle setLocation method
-	private Object handleSetLocation(Object[] args) {
-		// Check for correct argument type
-		if (args[0] instanceof Point2D) {
-			location = (Point2D) args[0];
-		} else {
-			throw new IllegalArgumentException("Invalid argument type for setLocation");
-		}
-
-		// If the image is already created, update its location directly
-		if (image != null) {
-			image.setLocation(location);
-		}
-		return null;
-	}
-
-	// Handle getLocation method
-	private Point2D handleGetLocation() {
-		// If the real image is already created, delegate to it
-		if (image != null) {
-			return image.getLocation();
-		} else {
-			// Otherwise, return the stored location in the proxy (or default if none set)
-			return location != null ? location : new Point2D(0, 0); // Default to (0, 0) if not set
-		}
-	}
-
-	// Handle render method
-	private Object handleRender() {
-		// Ensure the real image is created before rendering
-		createImageIfNecessary();
 		image.render();
 		return null;
 	}
-	
+
+	private Point2D handleGetLocation() {
+		if (image != null) {
+			System.out.println("Getting location from Image object.");
+			return image.getLocation();
+		} else {
+			System.out.println("Returning cached location from Proxy: " + location);
+			return this.location;
+		}
+	}
+
+	private Object handleSetLocation(Object[] args) {
+		Point2D point2D = (Point2D) args[0];
+		if (image != null) {
+			System.out.println("Setting location in Image object.");
+			image.setLocation(point2D);
+		} else {
+			System.out.println("Caching location in Proxy: " + point2D);
+			this.location = point2D;
+		}
+		return null;
+	}
 }
