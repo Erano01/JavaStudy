@@ -1,7 +1,7 @@
 package me.erano.com.example2;
 
-import me.erano.com.example1.Customer;
-import me.erano.com.example1.Employee;
+import me.erano.com.example.Customer;
+import me.erano.com.example.Employee;
 
 //adapter -> class adapter/two way adapter
 public class EmployeeObjectAdapter implements Customer{

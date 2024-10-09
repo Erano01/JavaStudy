@@ -1,11 +1,11 @@
 package me.erano.com;
 
-import me.erano.com.example1.GraphicTool;
-import me.erano.com.example1.product.Graphic;
-import me.erano.com.example1.product.HalfNote;
-import me.erano.com.example1.product.MusicalNote;
-import me.erano.com.example1.product.Staff;
-import me.erano.com.example1.product.WholeNote;
+import me.erano.com.example.GraphicTool;
+import me.erano.com.example.product.Graphic;
+import me.erano.com.example.product.HalfNote;
+import me.erano.com.example.product.MusicalNote;
+import me.erano.com.example.product.Staff;
+import me.erano.com.example.product.WholeNote;
 import me.erano.com.example2.Point3D;
 import me.erano.com.example2.Swordsman;
 

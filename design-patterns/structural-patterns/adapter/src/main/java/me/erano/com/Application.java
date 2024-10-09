@@ -1,8 +1,8 @@
 package me.erano.com;
 
-import me.erano.com.example1.BusinessCardDesigner;
-import me.erano.com.example1.Employee;
-import me.erano.com.example1.EmployeeClassAdapter;
+import me.erano.com.example.BusinessCardDesigner;
+import me.erano.com.example.Employee;
+import me.erano.com.example.EmployeeClassAdapter;
 import me.erano.com.example2.EmployeeObjectAdapter;
 import me.erano.com.example3.DrawingEditor;
 import me.erano.com.example3.Line;

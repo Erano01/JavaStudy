@@ -1,11 +1,11 @@
 package me.erano.com;
 
-import me.erano.com.example1.abstraction.IconWindow;
-import me.erano.com.example1.abstraction.TransientWindow;
-import me.erano.com.example1.abstraction.Window;
-import me.erano.com.example1.implementor.PMWindowImp;
-import me.erano.com.example1.implementor.WindowImp;
-import me.erano.com.example1.implementor.XWindowImp;
+import me.erano.com.example.abstraction.IconWindow;
+import me.erano.com.example.abstraction.TransientWindow;
+import me.erano.com.example.abstraction.Window;
+import me.erano.com.example.implementor.PMWindowImp;
+import me.erano.com.example.implementor.WindowImp;
+import me.erano.com.example.implementor.XWindowImp;
 import me.erano.com.example2.FifoCollection;
 import me.erano.com.example2.Queue;
 import me.erano.com.example2.SinglyLinkedList;

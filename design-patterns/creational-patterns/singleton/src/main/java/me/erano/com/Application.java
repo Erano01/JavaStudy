@@ -1,6 +1,6 @@
 package me.erano.com;
 
-import me.erano.com.example1.EagerRegistry;
+import me.erano.com.example.EagerRegistry;
 import me.erano.com.example2.LazyRegistryWithDCL;
 import me.erano.com.example3.LazyRegistryHolderIdiom;
 import me.erano.com.example4.RegistryEnum;

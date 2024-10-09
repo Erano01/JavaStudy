@@ -1,10 +1,10 @@
 package me.erano.com;
 
-import me.erano.com.example1.Graphic;
-import me.erano.com.example1.Line;
-import me.erano.com.example1.Picture;
-import me.erano.com.example1.Rectangle;
-import me.erano.com.example1.Text;
+import me.erano.com.example.Graphic;
+import me.erano.com.example.Line;
+import me.erano.com.example.Picture;
+import me.erano.com.example.Rectangle;
+import me.erano.com.example.Text;
 import me.erano.com.example2.BinaryFile;
 import me.erano.com.example2.Directory;
 import me.erano.com.example2.File;
