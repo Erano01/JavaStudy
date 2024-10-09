@@ -6,6 +6,7 @@ import me.erano.com.example1.Point2D;
 
 import java.util.List;
 
+//proxy
 public class ProtectionImageProxy implements Graphic {
 
     private Image image;

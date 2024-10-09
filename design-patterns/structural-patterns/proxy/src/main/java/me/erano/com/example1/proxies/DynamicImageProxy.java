@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 
 
 //Dynamic Proxy can work with all other proxy types and generally this type of structure provides a more flexible and powerful architecture.
+//Dynamic Proxies only implement InvocationHandler, with them no need for implementing RealSubject anymore.
 public class DynamicImageProxy implements InvocationHandler {
 
 	private final String filename;
