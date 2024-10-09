@@ -1,5 +1,7 @@
 package me.erano.com.example1;
 
+import java.util.List;
+
 //Subject
 public interface Graphic {
 
@@ -8,5 +10,7 @@ public interface Graphic {
     Point2D getLocation();
 
     void render();
+
+    List<String> getPermissionAccess();
 
 }

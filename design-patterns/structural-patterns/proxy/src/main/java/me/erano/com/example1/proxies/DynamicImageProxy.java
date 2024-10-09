@@ -8,10 +8,8 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 
-
-//Dynamic Proxy can work with other proxy types and generally this type of structure provides a more flexible and powerful architecture.
-//In this proxy we used smart reference(caching), virtual proxy(lazy init) features.
-public class DynamicVirtualSmartImageProxy implements InvocationHandler{
+//Dynamic Proxy can work with all other proxy types and generally this type of structure provides a more flexible and powerful architecture.
+public class DynamicImageProxy implements InvocationHandler {
 
 	private final String filename;
 	private Point2D location;
@@ -33,7 +31,7 @@ public class DynamicVirtualSmartImageProxy implements InvocationHandler{
 		}
 	}
 
-	public DynamicVirtualSmartImageProxy(String filename) {
+	public DynamicImageProxy(String filename) {
 		this.filename = filename;
 	}
 
@@ -45,6 +43,8 @@ public class DynamicVirtualSmartImageProxy implements InvocationHandler{
 			return handleSetLocation(args);
 		} else if (method.equals(getLocationMethod)) {
 			return handleGetLocation();
+		} else if (method.getName().equals("getPermissionAccess")) {
+			throw new IllegalAccessException("Access to getPermissionAccess method is not allowed.");
 		} else if (method.equals(renderMethod)) {
 			return handleRender();
 		}
@@ -87,4 +87,5 @@ public class DynamicVirtualSmartImageProxy implements InvocationHandler{
 		}
 		return null;
 	}
+
 }

@@ -3,39 +3,40 @@ package me.erano.com;
 import me.erano.com.example1.Graphic;
 import me.erano.com.example1.GraphicFactory;
 import me.erano.com.example1.Point2D;
-import me.erano.com.example2.RemoteGraphic;
+import me.erano.com.example1.proxies.ProtectionImageProxy;
 
 
 public class Application {
 
     //there are 4 type of proxy pattern ->
-    // 1-Remote Proxy ->
-    // 2-Virtual Proxy ->
-    // 3-Protection Proxy ->
+    // 1-Remote Proxy -> in remote proxy the main point is getting objects outside of our api.can be used with gRPC, HTTP/REST, WebSockets, JMS, RMI etc.
+    // 2-Virtual Proxy -> A virtual proxy creates expensive objects on demand. (for lazy init. objects)
+    // 3-Protection Proxy ->  A protection proxy controls access to the original object. Protection proxies are useful when objects should have different access rights.
     // 4-Smart Reference Proxy -> caching real subject state or fields.
     // 5-Dynamic Proxy -> implementing java.lang.reflect.InvocationHandler
     public static void main(String[] args) {
 
-        //ex1 -> virtual + smart proxy / dynamic + virtual + smart proxy
+        //Virtual + smart proxy /
         Graphic graphic = GraphicFactory.getImageFromVirtualSmartImageProxy("virtual_smart_image.png");
         graphic.setLocation(new Point2D(10,10));
         System.out.println("Image location :"+graphic.getLocation());
         graphic.render();
 
-        Graphic graphic2 = GraphicFactory.getImageFromDynamicVirtualSmartProxy("dynamic_virtual_smart_image.png");
+        //Dynamic + virtual + smart proxy
+        Graphic graphic2 = GraphicFactory.getImageFromDynamicProxy("dynamic_virtual_smart_image.png");
         graphic2.setLocation(new Point2D(0,-10));
         System.out.println("Image location :"+graphic2.getLocation());
         graphic2.render();
 
-        //ex2 -> remote proxy / dynamic remote proxy (RMI implementation is not needed this pattern is also can be used with gRPC, HTTP/REST, WebSockets etc)
-        RemoteGraphic remoteGraphic = GraphicFactory.getImageFromRemoteProxy("remote_image"); // name should match the one bound in RMI
-        try {
-            remoteGraphic.setLocation(new Point2D(20, 20));
-            System.out.println("Remote image location: " + remoteGraphic.getLocation());
-            remoteGraphic.render();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        //Protection proxy
+        Graphic imageProxyWithAccess = GraphicFactory.getImageFromProtectionImageProxy("test_image.jpg", true);
+        imageProxyWithAccess.setLocation(new Point2D(10, 20));
+        System.out.println("Location: " + imageProxyWithAccess.getLocation());
+        imageProxyWithAccess.getPermissionAccess();
+        imageProxyWithAccess.render();
+
+        //Dynamic + protection proxy
+
 
         // Examples from APIs ->
         // hibernate uses proxy to load collections of value types. For example,

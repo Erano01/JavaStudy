@@ -4,6 +4,8 @@ import me.erano.com.example1.Graphic;
 import me.erano.com.example1.Image;
 import me.erano.com.example1.Point2D;
 
+import java.util.List;
+
 //Proxy -> we used Virtual proxy + Smart reference proxy features.
 public class VirtualSmartImageProxy implements Graphic {
 
@@ -44,5 +46,13 @@ public class VirtualSmartImageProxy implements Graphic {
         }
         image.render();
 
+    }
+
+    @Override
+    public List<String> getPermissionAccess() {
+        if(image != null) {
+            return image.getPermissionAccess();
+        }
+        return null;
     }
 }
