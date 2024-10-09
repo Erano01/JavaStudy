@@ -1,8 +1,9 @@
 package me.erano.com;
 
-import me.erano.com.example.Graphic;
-import me.erano.com.example.GraphicFactory;
-import me.erano.com.example.Point2D;
+import me.erano.com.example1.Graphic;
+import me.erano.com.example1.GraphicFactory;
+import me.erano.com.example1.Point2D;
+import me.erano.com.example2.RemoteGraphic;
 
 
 public class Application {
@@ -15,7 +16,7 @@ public class Application {
     // 5-Dynamic Proxy -> implementing java.lang.reflect.InvocationHandler
     public static void main(String[] args) {
 
-        //virtual + smart proxy
+        //ex1 -> virtual + smart proxy / dynamic + virtual + smart proxy
         Graphic graphic = GraphicFactory.getImageFromVirtualSmartImageProxy("virtual_smart_image.png");
         graphic.setLocation(new Point2D(10,10));
         System.out.println("Image location :"+graphic.getLocation());
@@ -25,6 +26,16 @@ public class Application {
         graphic2.setLocation(new Point2D(0,-10));
         System.out.println("Image location :"+graphic2.getLocation());
         graphic2.render();
+
+        //ex2 -> remote proxy / dynamic remote proxy (RMI implementation is not needed this pattern is also can be used with gRPC, HTTP/REST, WebSockets etc)
+        RemoteGraphic remoteGraphic = GraphicFactory.getImageFromRemoteProxy("remote_image"); // name should match the one bound in RMI
+        try {
+            remoteGraphic.setLocation(new Point2D(20, 20));
+            System.out.println("Remote image location: " + remoteGraphic.getLocation());
+            remoteGraphic.render();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
         // Examples from APIs ->
         // hibernate uses proxy to load collections of value types. For example,
