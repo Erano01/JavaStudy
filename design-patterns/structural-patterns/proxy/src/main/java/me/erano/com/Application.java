@@ -8,12 +8,12 @@ import me.erano.com.example1.proxies.ProtectionImageProxy;
 
 public class Application {
 
-    //there are 4 type of proxy pattern ->
+    //there are 2 main type of proxy -> static or dynamic(implementing java.lang.reflect.InvocationHandler)
+    //there are 4 type of proxy pattern whether your proxy is dynamic or static, you can implement one of them in 1 proxy or implement all of them in 1 proxy ->
     // 1-Remote Proxy -> in remote proxy the main point is getting objects outside of our api.can be used with gRPC, HTTP/REST, WebSockets, JMS, RMI etc.
     // 2-Virtual Proxy -> A virtual proxy creates expensive objects on demand. (for lazy init. objects)
     // 3-Protection Proxy ->  A protection proxy controls access to the original object. Protection proxies are useful when objects should have different access rights.
     // 4-Smart Reference Proxy -> caching real subject state or fields.
-    // 5-Dynamic Proxy -> implementing java.lang.reflect.InvocationHandler
     public static void main(String[] args) {
 
         //Virtual + smart proxy /
