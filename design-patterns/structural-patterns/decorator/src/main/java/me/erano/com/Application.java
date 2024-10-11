@@ -1,5 +1,10 @@
 package me.erano.com;
 
+import me.erano.com.example2.Base64EncodedMessage;
+import me.erano.com.example2.HtmlEncodedMessage;
+import me.erano.com.example2.Message;
+import me.erano.com.example2.TextMessage;
+
 public class Application {
     public static void main(String[] args) {
 
@@ -7,13 +12,14 @@ public class Application {
 
 
 //        ex2
+        Message m = new TextMessage("The <FORCE> is strong with this one!");
+        System.out.println(m.getContent());
 
+        Message decorator = new HtmlEncodedMessage(m);
+        System.out.println(decorator.getContent());
 
-//        ex3
-
-
-
-
+        decorator = new Base64EncodedMessage(decorator);
+        System.out.println(decorator.getContent());
 
     }
 }
