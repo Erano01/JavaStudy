@@ -21,5 +21,9 @@ public class Application {
         decorator = new Base64EncodedMessage(decorator);
         System.out.println(decorator.getContent());
 
+        //classes in java's  I/O package are great examples of decorator pattern
+        // For example java.io.BufferedOutputStream class decorates any java.io.OutputStream object  and
+        //adds buffering to file writing operation. This improves the disk i/o performance by reducing number of writes.
+
     }
 }
