@@ -11,12 +11,14 @@ public abstract class Widget implements HelpHandler{
     }
 
     @Override
-    public void handleHelp() {
+    public void handleHelp(HelpHandler successor) {
         if (successor != null) {
             System.out.println("Widget: Passing help request to successor.");
-            successor.handleHelp();
+            successor.handleHelp(successor);
         } else {
             System.out.println("Widget: No successor to handle help request.");
         }
     }
+
+    protected abstract boolean showHelp(HelpHandler helpHandler);
 }
