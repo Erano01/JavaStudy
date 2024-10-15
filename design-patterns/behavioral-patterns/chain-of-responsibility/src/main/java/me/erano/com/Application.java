@@ -35,6 +35,10 @@ public class Application {
         approver.processLeaveApplication(application); //start chain
         System.out.println(application);
 
+        //ex3 -> Probably the best example of chain of responsibility is servlet filters.
+        //Each filter gets a chance to handle incoming requests and passes it down the chain once its work is done.
+        //All servlet filters implement the javax.servlet.Filter interface which defines doFilter() method.
+
 
     }
 }
