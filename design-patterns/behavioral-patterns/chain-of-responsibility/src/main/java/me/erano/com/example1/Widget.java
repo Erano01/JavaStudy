@@ -4,21 +4,25 @@ package me.erano.com.example1;
 public abstract class Widget implements HelpHandler{
 
     //next handler
-    private HelpHandler successor;
+    protected HelpHandler successor;
+
+    protected String handleInfo;
 
     public Widget(HelpHandler successor) {
         this.successor = successor;
     }
 
     @Override
-    public void handleHelp(HelpHandler successor) {
-        if (successor != null) {
-            System.out.println("Widget: Passing help request to successor.");
-            successor.handleHelp(successor);
-        } else {
-            System.out.println("Widget: No successor to handle help request.");
+    public void handleHelp(HelpRequest helpRequest) {
+        if (!showHelp(helpRequest) && successor != null) {
+            successor.handleHelp(helpRequest);
         }
     }
 
-    protected abstract boolean showHelp(HelpHandler helpHandler);
+    @Override
+    public String getHandleInfo() {
+        return handleInfo;
+    }
+
+    protected abstract boolean showHelp(HelpRequest helpRequest);
 }
