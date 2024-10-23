@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch1-foundations/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch1-foundations/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch2-sorting-and-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch2-sorting-and-order/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch3-data-structures/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch3-data-structures/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch4-advanced-design/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch4-advanced-design/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch5-advanced-data-structures/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch5-advanced-data-structures/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch6-graph/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/algo-ch6-graph/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/algorithms/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-patterns/creational-patterns/builder-pattern/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-patterns/creational-patterns/builder-pattern/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/design-patterns/creational-patterns/singleton/src/main/java" charset="UTF-8" />

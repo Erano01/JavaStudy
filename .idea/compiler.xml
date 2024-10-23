@@ -11,6 +11,8 @@
         <module name="jax-rs" />
         <module name="facade" />
         <module name="flyweight" />
+        <module name="algo-ch5-advanced-data-structures" />
+        <module name="algo-ch4-advanced-design" />
         <module name="observer" />
         <module name="factory-method" />
         <module name="iterator" />
@@ -19,14 +21,17 @@
         <module name="state" />
         <module name="chain-of-responsibility" />
         <module name="builder-pattern" />
+        <module name="algo-ch2-sorting-and-order" />
         <module name="singleton" />
         <module name="adapter" />
         <module name="memento" />
+        <module name="algo-ch3-data-structures" />
         <module name="interpreter" />
         <module name="prototype" />
         <module name="command" />
         <module name="lambda-expressions" />
         <module name="abstract-factory" />
+        <module name="algo-ch6-graph" />
         <module name="proxy" />
         <module name="stream-api" />
         <module name="bridge" />
@@ -34,6 +39,7 @@
         <module name="strategy" />
         <module name="visitor" />
         <module name="regular-expressions" />
+        <module name="algo-ch1-foundations" />
       </profile>
     </annotationProcessing>
   </component>
