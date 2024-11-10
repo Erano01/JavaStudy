@@ -33,6 +33,7 @@
         <module name="abstract-factory" />
         <module name="algo-ch6-graph" />
         <module name="proxy" />
+        <module name="algo-ch7-selected-topics" />
         <module name="stream-api" />
         <module name="bridge" />
         <module name="mediator" />
