@@ -4,11 +4,11 @@
 Bir sınıfın arayüzünü clientlerin beklediği başka bir arayüzüne dönüştürür. Adapter, uyumsuz arayüzler nedeniyle birlikte çalışamayan sınıfların birlikte çalışmasını sağlar.
 
 Yazar-Not:
-uyarlama = adaptasyon
-adaptee = adapte edilen
-adapter = adapte eden
-class adapter = two way adapter -> uses inheritance
-object adapter -> uses composition
+<p>uyarlama = adaptasyon</p>
+<p>adaptee = adapte edilen</p>
+<p>adapter = adapte eden</p>
+<p>class adapter = two way adapter -> uses inheritance</p>
+<p>object adapter -> uses composition</p>
 
 <h3>Also Known As</h3>
 Wrapper
