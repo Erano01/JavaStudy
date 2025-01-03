@@ -7,4 +7,11 @@ public class OpenCommand implements Command{
 
 
 
+    private MenuItem receiver;
+
+    @Override
+    public void execute() {
+        receiver.open();
+    }
+
 }
