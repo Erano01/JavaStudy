@@ -5,13 +5,15 @@ package me.erano.com.example1;
 //implements Execute by invoking the corresponding operation(s) on Receiver.
 public class OpenCommand implements Command{
 
+    private Document document;
 
-
-    private MenuItem receiver;
+    public OpenCommand(Document document) {
+        this.document = document;
+    }
 
     @Override
     public void execute() {
-        receiver.open();
+        document.open();
     }
 
 }
