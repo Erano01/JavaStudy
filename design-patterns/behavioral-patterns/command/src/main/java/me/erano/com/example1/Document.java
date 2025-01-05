@@ -9,6 +9,10 @@ public class Document {
 
     private String copiedContent;
 
+    public Document(List<String> documentContent) {
+        this.documentContent = documentContent;
+    }
+
     public void open(){
         String content = String.join(" ", documentContent);
         System.out.println("Document Content: " + content);
@@ -31,6 +35,10 @@ public class Document {
         return this.copiedContent;
     }
     public String paste(){
+        if (copiedContent == null){
+            System.out.println("There are no copied content to do paste.");
+            return "";
+        }
         return copiedContent;
     }
 
