@@ -8,10 +8,15 @@ import me.erano.com.example2.MailTasksRunner;
 
 import java.util.Arrays;
 
-//Receiver
+//This class is also represents as a Receiver
 //knows how to perform the operations associated with carrying out a request. Any class may serve as a Receiver.
 public class Application {
 
+    //Command Design Pattern Intent ->
+    // Encapsulate a request as an object, thereby letting you parameterize clients with different requests,
+    // queue or log requests, and support undoable operations.
+
+    // The command design pattern is an object alternative to call-back functions in procedural languages (passing an argument to a function and then executing another function).
     public static void main(String[] args) throws InterruptedException{
 
         //ex1
