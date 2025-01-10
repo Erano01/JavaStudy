@@ -1,5 +1,6 @@
 package me.erano.com;
 
+import me.erano.com.example1.*;
 import me.erano.com.example2.ExpressionBuilder;
 import me.erano.com.example2.PermissionExpression;
 import me.erano.com.example2.Report;
@@ -9,6 +10,18 @@ public class Application {
 
     public static void main(String[] args) {
         // example 1
+        // Grammar: raining & (dogs | cats) *
+        // Terminal ifadeler
+        RegularExpression raining = new LiteralExpression("raining");
+        RegularExpression dogs = new LiteralExpression("dogs");
+        RegularExpression cats = new LiteralExpression("cats");
+        // Non-terminal ifadeler
+        RegularExpression alternation = new AlternationExpression(dogs, cats);
+        RegularExpression repetition = new RepetitionExpression(alternation);
+        RegularExpression sequence = new SequenceExpression(raining, repetition);
+        String context = "It is raining cats and dogs";
+        boolean result = sequence.interpret(context);
+        System.out.println("Yorumlama Sonucu: " + result);
 
         // example 2
         Report report1  = new Report("Cashflow repot", "FINANCE_ADMIN OR ADMIN");
