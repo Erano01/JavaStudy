@@ -1,6 +1,7 @@
 package me.erano.com.example1;
 
 //Non-Terminal Expression
+// sequence expression -> Zaman, Ardışıklık, Bağlaçlar
 public class SequenceExpression implements RegularExpression {
     private final RegularExpression expr1;
     private final RegularExpression expr2;

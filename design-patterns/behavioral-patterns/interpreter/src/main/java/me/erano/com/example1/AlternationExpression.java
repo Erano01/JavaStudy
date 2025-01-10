@@ -1,6 +1,8 @@
 package me.erano.com.example1;
 
 //Non-Terminal Expression
+// alternation expressions -> alternatif ifadeler
+// Either... or, Neither... nor, Whether... or, Otherwise, if not, Instead
 public class AlternationExpression implements RegularExpression {
     private final RegularExpression expr1;
     private final RegularExpression expr2;

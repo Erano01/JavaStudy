@@ -1,6 +1,7 @@
 package me.erano.com.example1;
 
 //Non-Terminal Expression
+// repetition expression -> tekrarlanan ifadeler
 public class RepetitionExpression implements RegularExpression {
     private RegularExpression expression;
 
