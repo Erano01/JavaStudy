@@ -1,19 +1,26 @@
 package me.erano.com.example1;
 
 //Non-Terminal Expression
-// alternation expressions -> alternatif ifadeler
-// Either... or, Neither... nor, Whether... or, Otherwise, if not, Instead
-public class AlternationExpression implements RegularExpression {
-    private final RegularExpression expr1;
-    private final RegularExpression expr2;
+// alternation ::- expression '|' expression
+public class AlternationExpression extends RegularExpression {
+    private RegularExpression expression1;
+    private RegularExpression expression2;
 
-    public AlternationExpression(RegularExpression expr1, RegularExpression expr2) {
-        this.expr1 = expr1;
-        this.expr2 = expr2;
+    public AlternationExpression(RegularExpression expression1, RegularExpression expression2) {
+        super(new String(expression1.getContext() + " | " +expression2.getContext()));
+        this.expression1 = expression1;
+        this.expression2 = expression2;
+    }
+    private AlternationExpression(String context){
+        super(context);
     }
 
     @Override
-    public boolean interpret(String context) {
-        return expr1.interpret(context) || expr2.interpret(context);
+    public boolean interpret(RegularExpression expression) {
+        if(expression.getContext().contains(expression1.getContext()) |
+            expression.getContext().contains(expression2.getContext())){
+            return true;
+        }
+        return false;
     }
 }

@@ -9,21 +9,26 @@ import me.erano.com.example2.User;
 public class Application {
 
     public static void main(String[] args) {
-        // example 1
-        // Grammar: raining & (dogs | cats) *
-        // Terminal ifadeler
+
+        // Grammar: raining & (dogs | cats) *1
+        // Terminal expressions
         RegularExpression raining = new LiteralExpression("raining");
         RegularExpression dogs = new LiteralExpression("dogs");
         RegularExpression cats = new LiteralExpression("cats");
-        // Non-terminal ifadeler
+        RegularExpression sentence = new LiteralExpression("It is raining cats and dogs and big dogs");
+
+        // Non-terminal expressions
         RegularExpression alternation = new AlternationExpression(dogs, cats);
-        RegularExpression repetition = new RepetitionExpression(alternation);
-        RegularExpression sequence = new SequenceExpression(raining, repetition);
-        String context = "It is raining cats and dogs";
-        boolean result = sequence.interpret(context);
-        System.out.println("Yorumlama Sonucu: " + result);
+        System.out.println(alternation.interpret(sentence));
+
+        RegularExpression repetition = new RepetitionExpression(dogs, 2);
+        System.out.println(repetition.interpret(sentence));
+
+        RegularExpression sequence = new SequenceExpression(raining, cats);
+        System.out.println(sequence.interpret(sentence));
 
         // example 2
+        /*
         Report report1  = new Report("Cashflow repot", "FINANCE_ADMIN OR ADMIN");
         ExpressionBuilder builder = new ExpressionBuilder();
 
@@ -33,6 +38,8 @@ public class Application {
         User user1 = new User("Dave", "USER");
 
         System.out.println("User access report:"+ exp.interpret(user1));
+
+         */
 
         // Regex API (java.util.regex) ->
         // The Pattern and Matcher classes interpret regular expressions and evaluate them against input strings.

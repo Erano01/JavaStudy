@@ -1,22 +1,37 @@
 package me.erano.com.example1;
 
-//Non-Terminal Expression
-// repetition expression -> tekrarlanan ifadeler
-public class RepetitionExpression implements RegularExpression {
-    private RegularExpression expression;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-    public RepetitionExpression(RegularExpression expression) {
+//Non-Terminal Expression
+// repetition ::= expression '*'
+public class RepetitionExpression extends RegularExpression {
+    private RegularExpression expression;
+    private int repetition;
+
+    public RepetitionExpression(RegularExpression expression, int repetition){
+        super(expression.getContext());
         this.expression = expression;
+        this.repetition = repetition;
+    }
+    private RepetitionExpression(String context){
+        super(context);
     }
 
     @Override
-    public boolean interpret(String context) {
-        String[] words = context.split("\\s+"); // Cümleyi kelimelere böl
-        for (String word : words) {
-            if (expression.interpret(word)) {
-                return true; // Alt ifade bir kez eşleştiyse true
-            }
+    public boolean interpret(RegularExpression argExpression) {
+        String target = argExpression.getContext();
+        String pattern = expression.getContext();
+        int index = 0;
+        int count = 0;
+        while ((index = target.indexOf(pattern, index)) != -1) {
+            count++;
+            index += pattern.length();
+            
         }
-        return false;
+        // Return true if the pattern is repeated exactly 'repetition' times
+        return count == this.repetition;
     }
+
+
 }

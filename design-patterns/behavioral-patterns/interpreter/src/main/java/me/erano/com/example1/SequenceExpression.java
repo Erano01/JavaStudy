@@ -1,19 +1,27 @@
 package me.erano.com.example1;
 
 //Non-Terminal Expression
-// sequence expression -> Zaman, Ardışıklık, Bağlaçlar
-public class SequenceExpression implements RegularExpression {
-    private final RegularExpression expr1;
-    private final RegularExpression expr2;
+// sequence ::- expression '&' expression
+public class SequenceExpression extends RegularExpression {
 
-    public SequenceExpression(RegularExpression expr1, RegularExpression expr2) {
-        this.expr1 = expr1;
-        this.expr2 = expr2;
+    private RegularExpression expression1;
+    private RegularExpression expression2;
+
+    private SequenceExpression(String context) {
+        super(context);
     }
+    public SequenceExpression(RegularExpression expression1, RegularExpression expression2){
+        super(new String(expression1.getContext()+ " & " +expression2.getContext()));
+        this.expression1 = expression1;
+        this.expression2 = expression2;
 
+    }
     @Override
-    public boolean interpret(String context) {
-        // İki ifade de sırayla mevcut olmalı.
-        return context.contains(expr1.toString()) && context.contains(expr2.toString());
+    public boolean interpret(RegularExpression argExpression) {
+        if(argExpression.getContext().contains(expression1.getContext()) &
+            argExpression.getContext().contains(expression2.getContext())){
+            return true;
+        }
+        return false;
     }
 }
