@@ -21,7 +21,7 @@ public class Application {
         RegularExpression alternation = new AlternationExpression(dogs, cats);
         System.out.println(alternation.interpret(sentence));
 
-        RegularExpression repetition = new RepetitionExpression(dogs, 2);
+        RegularExpression repetition = new RepetitionExpression(dogs, 1);
         System.out.println(repetition.interpret(sentence));
 
         RegularExpression sequence = new SequenceExpression(raining, cats);
