@@ -17,9 +17,10 @@ public class Application {
         list.add("Something1");
         list.add("Something2");
         list.add("Something3");
-        // iterator() factory method returns appropriate concrete iterator for that aggregate object
-        // in this scenario, ArrayList factory method that returns iterator calls listIterator() on AbstractList
-        // and that method returns one of ListIterator<E> iterator implementation that exists in AbstractList (inner class)
+        // iterator() factory method returns appropriate concrete iterator for that aggregate object.
+        // in this scenario, ArrayLists iterator() factory method calls listIterator()
+        // method that exists in AbstractList and that method returns one of ListIterator<E>
+        // iterator implementation that exists in AbstractList (inner class)
         Iterator<String> iterator = list.iterator();
         while(iterator.hasNext()) {
             System.out.println(iterator.next());
