@@ -9,12 +9,11 @@ public class Application {
 
     public static void main(String[] args) {
         //example1 -> GoF implementation way
-        /*
         ConstraintSolver originator1 = new ConstraintSolver(new Location(0,0,0));
         SolverState memento1 = originator1.getMemento();
 
         CaretakerThread caretaker1 = new CaretakerThread(memento1);
-        caretaker1.start();*/
+        caretaker1.start();
 
         //example2 -> java inner class way (memento is inner class inside Originator)
         me.erano.com.example2.ConstraintSolver originator2 = new me.erano.com.example2.ConstraintSolver(new Location(1,1,1));
