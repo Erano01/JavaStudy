@@ -7,7 +7,7 @@ public class Application {
     // For reliable and ordered messaging among threads, consider using one of the concurrent data structures in the
     // java.util.concurrent package. For reactive streams style programming, see the Flow API.
     public static void main(String[] args) {
-        //example 1 -> GoF custom observer design pattern implementation from scratch
+        //example 1 -> custom observer design pattern implementation from scratch (+Mediator Pattern implemented)
 
         //example 2 -> deprecated observer design pattern implementation using: java.util.observable & java.util.observer usage
 
