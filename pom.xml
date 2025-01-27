@@ -17,5 +17,12 @@
         <module>algorithms</module>
 		<module>algorithms/algo-ch4-advanced-design</module>
         <module>concurrency</module>
-    </modules>
+        <module>concurrency/ch1-thread-objects</module>
+        <module>concurrency/ch2-synchronization</module>
+		<module>concurrency/ch3-liveness</module>
+		<module>concurrency/ch4-guarded-blocks</module>
+		<module>concurrency/ch5-immutable-objects</module>
+		<module>concurrency/ch6-high-level-concurrency-objects</module>
+		<module>concurrency/ch7-java-language-spec-thread-and-locks</module>
+	</modules>
 </project>

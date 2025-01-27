@@ -10,6 +10,7 @@
         <module name="template-method" />
         <module name="decorator" />
         <module name="jax-rs" />
+        <module name="ch7-java-language-spec-thread-and-locks" />
         <module name="facade" />
         <module name="flyweight" />
         <module name="algo-ch5-advanced-data-structures" />
@@ -17,6 +18,8 @@
         <module name="observer" />
         <module name="factory-method" />
         <module name="iterator" />
+        <module name="ch2-synchronization" />
+        <module name="ch3-liveness" />
         <module name="generics" />
         <module name="composite" />
         <module name="state" />
@@ -25,15 +28,19 @@
         <module name="algo-ch2-sorting-and-order" />
         <module name="singleton" />
         <module name="adapter" />
+        <module name="ch1-thread-objects" />
         <module name="memento" />
         <module name="algo-ch3-data-structures" />
         <module name="interpreter" />
         <module name="prototype" />
+        <module name="ch5-immutable-objects" />
         <module name="command" />
         <module name="lambda-expressions" />
+        <module name="ch4-guarded-blocks" />
         <module name="abstract-factory" />
         <module name="algo-ch6-graph" />
         <module name="proxy" />
+        <module name="ch6-high-level-concurrency-objects" />
         <module name="algo-ch7-selected-topics" />
         <module name="stream-api" />
         <module name="bridge" />
