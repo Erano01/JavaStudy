@@ -1,13 +1,13 @@
-package me.erano.com.example1;
+package me.erano.com.example5;
 
 import org.jetbrains.annotations.NotNull;
 
 //Concrete Subject, Concrete Event, Concrete Observable, Concrete Publisher
-public class MouseEvent extends Event{
-
+public class KeyboardEvent extends Event{
+    private static final HandlerList handlers = new HandlerList();
 
     @Override
     public @NotNull HandlerList getHandlers() {
-        return null;
+        return handlers;
     }
 }

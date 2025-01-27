@@ -1,4 +1,4 @@
-package me.erano.com.example1;
+package me.erano.com.example5;
 
 //Concrete Observer, Concrete Listener, Concrete Subscriber
 public class MouseListener implements Listener{

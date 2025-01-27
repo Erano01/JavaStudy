@@ -1,4 +1,4 @@
-package me.erano.com.example1;
+package me.erano.com.example5;
 
 public enum EventPriority {
     LOWEST(0),

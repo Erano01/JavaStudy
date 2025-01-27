@@ -7,14 +7,16 @@ public class Application {
     // For reliable and ordered messaging among threads, consider using one of the concurrent data structures in the
     // java.util.concurrent package. For reactive streams style programming, see the Flow API.
     public static void main(String[] args) {
-        //example 1 -> custom observer design pattern implementation from scratch (+Mediator Pattern implemented)
+        //example 1 -> Simple GoF Observer Design Pattern implementation
 
-        //example 2 -> deprecated observer design pattern implementation using: java.util.observable & java.util.observer usage
+        //example 2 -> deprecated simple observer design pattern implementation using: java.util.observable & java.util.observer usage
 
         //example 3 -> new observer design pattern implementation using : java.beans
 
         //example 4 -> new observer design pattern implementation using: java.util.concurrent & Flow API
 
-        //example 5 -> https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/package-summary.html
+        //example 5 -> custom observer design pattern implementation from scratch (+Mediator Pattern implemented)
+        // I get inspired from Spigot API -> https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/package-summary.html
+
     }
 }

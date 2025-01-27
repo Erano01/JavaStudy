@@ -1,4 +1,4 @@
-package me.erano.com.example1;
+package me.erano.com.example5;
 
 public class EventException extends Exception {
     private static final long serialVersionUID = 3532808232324183999L;
