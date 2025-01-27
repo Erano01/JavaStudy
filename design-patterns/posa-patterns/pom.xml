@@ -5,12 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>me.erano.com</groupId>
-        <artifactId>concurrency</artifactId>
+        <artifactId>design-patterns</artifactId>
         <version>1.0</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>ch6-high-level-concurrency-objects</artifactId>
+    <artifactId>posa-patterns</artifactId>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>

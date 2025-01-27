@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>me.erano.com</groupId>
-        <artifactId>JavaStudy</artifactId>
+        <artifactId>concurrency</artifactId>
         <version>1.0</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>

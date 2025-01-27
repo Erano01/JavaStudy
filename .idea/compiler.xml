@@ -22,6 +22,7 @@
         <module name="ch3-liveness" />
         <module name="generics" />
         <module name="composite" />
+        <module name="posa-patterns" />
         <module name="state" />
         <module name="chain-of-responsibility" />
         <module name="builder-pattern" />

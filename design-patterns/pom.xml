@@ -13,5 +13,6 @@
 		<module>creational-patterns</module>
 		<module>behavioral-patterns</module>
 		<module>structural-patterns</module>
-	</modules>
+        <module>posa-patterns</module>
+    </modules>
 </project>
