@@ -10,7 +10,7 @@
     </parent>
     <packaging>pom</packaging>
     <modules>
-        <module>1.2-Algorithms-As-Technology</module>
+        <module>1.2-algorithms-as-technology</module>
     </modules>
 
     <artifactId>algo-ch1-foundations</artifactId>

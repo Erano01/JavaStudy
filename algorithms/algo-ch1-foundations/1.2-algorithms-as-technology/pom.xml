@@ -9,7 +9,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>1.2-Algorithms-As-Technology</artifactId>
+    <artifactId>2-algorithms-as-technology</artifactId>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
