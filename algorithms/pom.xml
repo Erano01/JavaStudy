@@ -19,6 +19,7 @@
         <module>algo-ch5-advanced-data-structures</module>
         <module>algo-ch6-graph</module>
         <module>algo-ch7-selected-topics</module>
+        <module>1.1-Algorithms</module>
     </modules>
 
     <properties>

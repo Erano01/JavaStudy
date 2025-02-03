@@ -37,14 +37,15 @@
         <module name="algo-ch7-selected-topics" />
         <module name="stream-api" />
         <module name="bridge" />
+        <module name="1.2-Algorithms-As-Technology" />
         <module name="mediator" />
         <module name="strategy" />
         <module name="visitor" />
         <module name="regular-expressions" />
-        <module name="algo-ch1-foundations" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="1.1-Algorithms" target="23" />
       <module name="ch2-synchronization" target="23" />
       <module name="ch4-guarded-blocks" target="23" />
       <module name="ch5-immutable-objects" target="23" />
