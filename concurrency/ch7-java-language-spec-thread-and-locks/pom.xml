@@ -7,7 +7,6 @@
         <groupId>me.erano.com</groupId>
         <artifactId>concurrency</artifactId>
         <version>1.0</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>ch7-java-language-spec-thread-and-locks</artifactId>

@@ -12,6 +12,7 @@
     <artifactId>algorithms</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>algo-ch1-foundations</module>
         <module>algo-ch2-sorting-and-order</module>
         <module>algo-ch1-foundations</module>
         <module>algo-ch3-data-structures</module>
@@ -19,7 +20,6 @@
         <module>algo-ch5-advanced-data-structures</module>
         <module>algo-ch6-graph</module>
         <module>algo-ch7-selected-topics</module>
-        <module>1.1-Algorithms</module>
     </modules>
 
     <properties>

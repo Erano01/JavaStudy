@@ -12,7 +12,15 @@
     <artifactId>concurrency</artifactId>
     <packaging>pom</packaging>
 
-    <modules></modules>
+    <modules>
+        <module>ch1-thread-objects</module>
+        <module>ch2-synchronization</module>
+        <module>ch3-liveness</module>
+        <module>ch4-guarded-blocks</module>
+        <module>ch5-immutable-objects</module>
+        <module>ch6-high-level-concurrency-objects</module>
+        <module>ch7-java-language-spec-thread-and-locks</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
