@@ -10,6 +10,7 @@
         <module name="template-method" />
         <module name="decorator" />
         <module name="jax-rs" />
+        <module name="2-algorithms-as-technology" />
         <module name="ch7-java-language-spec-thread-and-locks" />
         <module name="facade" />
         <module name="flyweight" />
