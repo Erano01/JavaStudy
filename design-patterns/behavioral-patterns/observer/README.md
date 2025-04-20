@@ -20,8 +20,8 @@ https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/concurren
 https://docs.oracle.com/en/java/javase/23/docs/api/java.desktop/java/beans/package-summary.html
 https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/concurrent/Flow.html
 
-observer = listener, subscriber
-subject = observable, publisher, event
+//Observer ≈ Listener ≈ Subscriber
+//Subject ≈ Publisher ≈ Event ≈ Observable ≈ Event Source
 
 <h3>Also Known As</h3>
 Dependents, Publish-Subscribe
