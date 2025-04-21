@@ -1,7 +1,7 @@
-package me.erano.com.example5;
+package me.erano.com.spigot;
 
 //observer, listener, subscriber
-//Simple interface for tagging all EventListeners - Marker interface
+//Simple Marker interface for tagging all EventListeners
 public interface Listener {
 
     //void update(); -> we will use @EventHandler annotation to change this listeners child classes state

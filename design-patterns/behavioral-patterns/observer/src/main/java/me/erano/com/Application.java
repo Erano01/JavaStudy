@@ -8,6 +8,9 @@ import me.erano.com.example3.BeanYoutubeChannel;
 import me.erano.com.example3.BeanUser;
 import me.erano.com.example4.FlowUser;
 import me.erano.com.example4.FlowYoutubeChannel;
+import me.erano.com.spigot.EventBus;
+import me.erano.com.spigot.PlayerEventListener;
+import me.erano.com.spigot.PlayerJoinEvent;
 
 public class Application {
     // Observable and the Observer interface have been deprecated. The event model supported by Observer and Observable is quite limited,
@@ -61,6 +64,10 @@ public class Application {
 
         //example 5 -> custom observer design pattern implementation from scratch (+Mediator Pattern implemented)
         // I get inspired from Spigot API -> https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/package-summary.html
+        EventBus eventBus = new EventBus();
+        eventBus.registerEvents(new PlayerEventListener());
+
+        eventBus.callEvent(new PlayerJoinEvent("EranoMC"));
 
     }
 }
