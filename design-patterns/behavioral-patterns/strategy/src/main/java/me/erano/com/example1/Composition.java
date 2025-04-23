@@ -1,5 +1,6 @@
 package me.erano.com.example1;
 
+//Context class
 public class Composition {
     private Compositor compositor;
 
