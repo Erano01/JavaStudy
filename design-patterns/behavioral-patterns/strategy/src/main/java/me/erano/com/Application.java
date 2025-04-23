@@ -5,6 +5,9 @@ import me.erano.com.example1.Composition;
 import me.erano.com.example1.SimpleCompositor;
 import me.erano.com.example1.TeXCompositor;
 import me.erano.com.example2.*;
+import me.erano.com.example3.CreditCardPayment;
+import me.erano.com.example3.PayPalPayment;
+import me.erano.com.example3.ShoppingCart;
 
 public class Application {
     public static void main(String[] args) {
@@ -46,6 +49,16 @@ public class Application {
 
         LoanInterestRate context3 = new LoanInterestRate(new CollateralBasedPricing());
         System.out.println("Collateral Based Rate: " + context3.getRate(loanApplicationModel));
+
+        //example 3 -> payment strategies
+        ShoppingCart cart = new ShoppingCart();
+
+        cart.setPayment(new CreditCardPayment("1234-5678-9876-5432"));
+        cart.checkout(150);
+
+        cart.setPayment(new PayPalPayment("user@example.com"));
+        cart.checkout(250);
+
 
     }
 }
