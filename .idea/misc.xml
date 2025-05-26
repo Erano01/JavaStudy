@@ -10,6 +10,17 @@
         <option value="$PROJECT_DIR$/concurrency/ch3-liveness/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/concurrency/ch1-thread-objects/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/ch2-synchronization/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/ch3-liveness/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/ch4-guarded-blocks/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/ch5-immutable-objects/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/ch6-high-level-concurrency-objects/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/ch7-java-language-spec-thread-and-locks/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK" />
 </project>
