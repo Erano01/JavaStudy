@@ -1,9 +1,6 @@
 package me.erano.com.futuretask.example01;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class Application {
 
@@ -12,13 +9,22 @@ public class Application {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         Future<String> result = executeAsync();
         System.out.println("Here is the result: "+result.get());
+        System.out.println("Main thread is still running");
     }
 
     private static Future<String> executeAsync(){
-        return threadPool.submit(()-> {
+
+        CompletableFuture<String> completableFuture = new CompletableFuture<>();
+
+        threadPool.submit(()-> {
             executeWorkload("workload1");
-            return "<workload result>";
+            completableFuture.completeExceptionally(new RuntimeException("Workload 1 failed"));
+            completableFuture.complete("<workload_result>");
+            executeWorkload("workload2");
+            System.out.println("Workload 2 completed");
         });
+
+        return completableFuture;
     }
 
     private static void executeWorkload(String name){

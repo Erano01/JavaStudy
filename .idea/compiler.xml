@@ -11,6 +11,7 @@
         <module name="decorator" />
         <module name="jax-rs" />
         <module name="2-algorithms-as-technology" />
+        <module name="demo01" />
         <module name="facade" />
         <module name="flyweight" />
         <module name="algo-ch5-advanced-data-structures" />
@@ -18,7 +19,6 @@
         <module name="observer" />
         <module name="factory-method" />
         <module name="iterator" />
-        <module name="futuretask-example01" />
         <module name="generics" />
         <module name="composite" />
         <module name="1.2-algorithms-as-technology" />

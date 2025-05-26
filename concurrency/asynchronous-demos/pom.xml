@@ -12,7 +12,7 @@
     <artifactId>asynchronous-demos</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>futuretask-example01</module>
+        <module>demo01</module>
     </modules>
 
     <properties>

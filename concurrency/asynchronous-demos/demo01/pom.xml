@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>me.erano.com.futuretask-example01</groupId>
-    <artifactId>futuretask-example01</artifactId>
+    <artifactId>demo01</artifactId>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
