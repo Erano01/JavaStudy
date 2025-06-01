@@ -5,21 +5,30 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>me.erano.com</groupId>
-        <artifactId>concurrency</artifactId>
+        <artifactId>asynchronous-demos</artifactId>
         <version>1.0</version>
     </parent>
 
-    <artifactId>asynchronous-demos</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>demo01</module>
-        <module>demo02</module>
-    </modules>
+    <artifactId>demo02</artifactId>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j.</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.17</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.4.8-jre</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

@@ -10,6 +10,7 @@
         <module name="template-method" />
         <module name="decorator" />
         <module name="jax-rs" />
+        <module name="demo02" />
         <module name="2-algorithms-as-technology" />
         <module name="demo01" />
         <module name="facade" />
@@ -22,6 +23,7 @@
         <module name="generics" />
         <module name="composite" />
         <module name="1.2-algorithms-as-technology" />
+        <module name="thread-objects" />
         <module name="state" />
         <module name="chain-of-responsibility" />
         <module name="builder-pattern" />
@@ -55,6 +57,7 @@
       <module name="ch5-immutable-objects" target="23" />
       <module name="ch6-high-level-concurrency-objects" target="23" />
       <module name="ch7-java-language-spec-thread-and-locks" target="23" />
+      <module name="demo002" target="23" />
     </bytecodeTargetLevel>
   </component>
 </project>

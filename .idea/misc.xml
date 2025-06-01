@@ -12,6 +12,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/concurrency/asynchronous-demos/demo002/pom.xml" />
         <option value="$PROJECT_DIR$/concurrency/ch1-thread-objects/pom.xml" />
         <option value="$PROJECT_DIR$/concurrency/ch2-synchronization/pom.xml" />
         <option value="$PROJECT_DIR$/concurrency/ch3-liveness/pom.xml" />

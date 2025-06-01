@@ -5,16 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>me.erano.com</groupId>
-        <artifactId>concurrency</artifactId>
+        <artifactId>JavaStudy</artifactId>
         <version>1.0</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>asynchronous-demos</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>demo01</module>
-        <module>demo02</module>
-    </modules>
+    <artifactId>thread-objects</artifactId>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
