@@ -3,7 +3,6 @@
 <h3>Intent</h3>
 Parça-bütün (part-whole) hiyerarşilerini temsil etmek için nesneleri ağaç mimarilerine (tree structures) dönüştürün. Composite, client'lerin bireysel nesneleri ve nesne compositionlarını tek tip olarak ele almasını sağlar.
 
-//burada ki composition kavramı oop'daki composition kavramı değildir. oopda içinde başka bir nesneye işaret eden bir referansa sahip bir nesnemiz olduğu anlamına gelir. Fakat bu composite patterninde, oopdaki composition kullanılır.
 
 <h3>Motivation</h3>
 Drawing editörleri ve şematik yakalama sistemleri(schematic capture systems) gibi grafik uygulamaları, kullanıcıların basit componentlerden karmaşık diyagramlar oluşturmasına olanak tanır.
