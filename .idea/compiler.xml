@@ -23,7 +23,6 @@
         <module name="generics" />
         <module name="composite" />
         <module name="1.2-algorithms-as-technology" />
-        <module name="thread-objects" />
         <module name="state" />
         <module name="chain-of-responsibility" />
         <module name="builder-pattern" />
@@ -46,6 +45,7 @@
         <module name="strategy" />
         <module name="visitor" />
         <module name="regular-expressions" />
+        <module name="single-threaded-async" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -58,6 +58,8 @@
       <module name="ch6-high-level-concurrency-objects" target="23" />
       <module name="ch7-java-language-spec-thread-and-locks" target="23" />
       <module name="demo002" target="23" />
+      <module name="single-core-concurrency" target="24" />
+      <module name="thread-objects" target="23" />
     </bytecodeTargetLevel>
   </component>
 </project>

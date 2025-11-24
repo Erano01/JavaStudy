@@ -20,6 +20,8 @@
         <option value="$PROJECT_DIR$/concurrency/ch5-immutable-objects/pom.xml" />
         <option value="$PROJECT_DIR$/concurrency/ch6-high-level-concurrency-objects/pom.xml" />
         <option value="$PROJECT_DIR$/concurrency/ch7-java-language-spec-thread-and-locks/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/single-core-concurrency/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrency/thread-objects/pom.xml" />
       </set>
     </option>
   </component>

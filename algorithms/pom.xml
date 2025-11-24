@@ -14,7 +14,6 @@
     <modules>
         <module>algo-ch1-foundations</module>
         <module>algo-ch2-sorting-and-order</module>
-        <module>algo-ch1-foundations</module>
         <module>algo-ch3-data-structures</module>
         <module>algo-ch4-advanced-design</module>
         <module>algo-ch5-advanced-data-structures</module>

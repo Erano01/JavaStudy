@@ -17,6 +17,5 @@
         <module>algorithms</module>
 		<module>algorithms/algo-ch4-advanced-design</module>
         <module>concurrency</module>
-        <module>concurrency/thread-objects</module>
     </modules>
 </project>
