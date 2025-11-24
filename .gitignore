@@ -1,0 +1,30 @@
+# IntelliJ IDEA
+.idea/
+out/
+
+
+# Log dosyaları
+*.log
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
+
+# Kişisel ayarlar
+*.swp
+*.swo
+
+# Test çıktıları
+test-output/
+
+# VSCode
+.vscode/
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+
+#bunları gönderme github actionsda build edicez zaten.
+**/target/
+*.jar
