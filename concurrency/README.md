@@ -6,6 +6,7 @@ Tek bir uygulamadan bile sıklıkla aynı anda birden fazla şey yapması beklen
 Kelime işleyicisi(word processor) bile, metni yeniden biçimlendirmekle veya ekranı güncellemekle ne kadar meşgul olursa olsun, klavye ve fare eventlerine yanıt vermeye her zaman hazır olmalıdır. Bu tür şeyleri yapabilen yazılıma concurrent(eş zamanlı) yazılım denir.
 <br>
 Buradaki kritik nokta “aynı anda çalışıyor gibi görünmesi”dir; her zaman gerçekten paralel çalışmak zorunda değildir.
+<br>
 concurrency -> Aynı anda birden fazla iş biriminin (thread, task, coroutine) ilerliyor olmasıdır. Bu işler gerçek paralel çalışmaz ama eşzamanlı görünür (özellikle single-core sistemde).
 <br>
 // Concurrency is property of a program's structure
