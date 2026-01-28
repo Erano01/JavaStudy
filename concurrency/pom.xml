@@ -15,6 +15,7 @@
     <modules>
         <module>asynchronous-demos</module>
         <module>single-threaded-async</module>
+        <module>thread-safety</module>
     </modules>
 
     <properties>

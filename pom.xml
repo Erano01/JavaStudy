@@ -15,7 +15,6 @@
 		<module>regular-expressions</module>
 		<module>jax-rs</module>
         <module>algorithms</module>
-		<module>algorithms/algo-ch4-advanced-design</module>
         <module>concurrency</module>
     </modules>
 </project>
