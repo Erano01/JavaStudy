@@ -16,6 +16,5 @@
 		<module>jax-rs</module>
         <module>concurrency</module>
         <module>dsa-algorithms</module>
-		<module>dsa-algorithms/insertion-sort</module>
 	</modules>
 </project>
