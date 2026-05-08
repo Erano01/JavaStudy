@@ -1,4 +1,4 @@
-package me.erano.com;
+package me.erano.com.core;
 
 public class InsertionSort {
 

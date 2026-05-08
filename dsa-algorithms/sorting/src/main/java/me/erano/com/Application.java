@@ -1,5 +1,7 @@
 package me.erano.com;
 
+import me.erano.com.core.InsertionSort;
+
 public class Application {
     public static void main(String[] args) {
         // insertion sort (core)
