@@ -14,7 +14,8 @@
 		<module>generics</module>
 		<module>regular-expressions</module>
 		<module>jax-rs</module>
-        <module>algorithms</module>
         <module>concurrency</module>
-    </modules>
+        <module>dsa-algorithms</module>
+		<module>dsa-algorithms/insertion-sort</module>
+	</modules>
 </project>

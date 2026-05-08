@@ -5,15 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>me.erano.com</groupId>
-        <artifactId>algorithms</artifactId>
+        <artifactId>JavaStudy</artifactId>
         <version>1.0</version>
     </parent>
 
-    <artifactId>algo-ch3-data-structures</artifactId>
+    <artifactId>dsa-algorithms</artifactId>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
