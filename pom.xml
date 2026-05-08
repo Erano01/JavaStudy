@@ -18,5 +18,13 @@
         <module>dsa-algorithms</module>
 		<module>dsa-algorithms/greedy</module>
 		<module>dsa-algorithms/sorting</module>
+		<module>dsa-algorithms/searching</module>
+		<module>dsa-algorithms/data-structures</module>
+		<module>dsa-algorithms/recursion</module>
+		<module>dsa-algorithms/divide-and-conquer</module>
+		<module>dsa-algorithms/graphs</module>
+		<module>dsa-algorithms/dynamic-programming</module>
+		<module>dsa-algorithms/backtracking</module>
+		<module>dsa-algorithms/tree</module>
 	</modules>
 </project>
