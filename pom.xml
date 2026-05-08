@@ -16,5 +16,7 @@
 		<module>jax-rs</module>
         <module>concurrency</module>
         <module>dsa-algorithms</module>
+		<module>dsa-algorithms/greedy</module>
+		<module>dsa-algorithms/sorting</module>
 	</modules>
 </project>
