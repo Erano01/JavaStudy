@@ -9,7 +9,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>single-threaded-async</artifactId>
+    <artifactId>single-threaded-dispatcher</artifactId>
 
     <properties>
         <java.version>24</java.version>
