@@ -1,11 +1,14 @@
 package me.erano.com.concurrent.safety;
 
+import net.jcip.annotations.ThreadSafe;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
 // Durumsuz Sınıf (Stateless Class) örneği: StatelessFactorizer
 // Bu sınıf, shared mutable state değişkenleri içermediği için thread-safe olarak kabul edilir.
+@ThreadSafe
 public class StatelessFactorizer {
 
     public BigInteger[] service(BigInteger input) {

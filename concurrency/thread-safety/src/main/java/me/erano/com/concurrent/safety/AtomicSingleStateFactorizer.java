@@ -1,5 +1,7 @@
 package me.erano.com.concurrent.safety;
 
+import net.jcip.annotations.ThreadSafe;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 // Çünkü -> Sadece tek bir shared mutable state variable'i var ve invariant'ı yok.
 // Ancak -> Thread'ler arasında count null olarak gözükebilir.
 // Çözüm -> Final ile bu garanti sağlanabilir veya intrinsic/explicit locklar ile.
+@ThreadSafe
 public class AtomicSingleStateFactorizer {
 
     private final AtomicLong count = new AtomicLong(0);
