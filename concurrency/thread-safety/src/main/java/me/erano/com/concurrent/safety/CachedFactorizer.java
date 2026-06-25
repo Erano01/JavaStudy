@@ -6,7 +6,7 @@ import net.jcip.annotations.ThreadSafe;
 import java.math.BigInteger;
 
 @ThreadSafe
-public class ImmutableStateFactorizer {
+public class CachedFactorizer {
     @GuardedBy("this")
     private BigInteger lastNumber;
     @GuardedBy("this")
