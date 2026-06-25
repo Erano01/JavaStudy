@@ -38,7 +38,7 @@
         <artifactId>javafx-maven-plugin</artifactId>
         <version>0.0.3</version>
         <configuration>
-          <mainClass>me.erano.com.Application</mainClass>
+          <mainClass>me.erano.com.concurrent.safety.Application</mainClass>
         </configuration>
       </plugin>
     </plugins>
