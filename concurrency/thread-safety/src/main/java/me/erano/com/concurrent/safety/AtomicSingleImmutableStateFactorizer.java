@@ -7,17 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-// Bu sınıf thread-safe'dir ancak visibility problemi vardır doğru şekilde publish edilmezse.
-// Thread-safe çünkü -> Sadece tek bir shared mutable state variable'i var ve invariant'ı yok.
-// Doğru publish edilmez ise thread'ler arasında count null olarak gözükebilir.
-
-// Bu sınıfın instance'ini oluştururken volatile, final veya static final field'ına atama yaparak
-// veya synchronized block içinde atama yaparak safe publication sağlamış oluruz.
-// Ancak visibility sorumluluğu sadece oluşturma anında değil, nesnenin her paylaşıldığı noktada ilgili tarafa girer.
 @ThreadSafe
-public class AtomicSingleStateFactorizer {
+public class AtomicSingleImmutableStateFactorizer {
 
-    private AtomicLong count = new AtomicLong(0);
+    private final AtomicLong count = new AtomicLong(0);
 
     public long getCount() { return count.get(); }
 
