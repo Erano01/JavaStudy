@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+// Immutability için tüm fieldların final olması yetmez, construction aşamasında "this" referansının escape edilmemesi gerekir.
 @ThreadSafe
-public class AtomicSingleImmutableStateFactorizer {
-
+public class AtomicSingleStateFactorizer {
     private final AtomicLong count = new AtomicLong(0);
 
     public long getCount() { return count.get(); }
