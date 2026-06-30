@@ -1,4 +1,4 @@
-package me.erano.com.concurrent.fmentals;
+package me.erano.com.jcip.concurrent.fmentals;
 
 // Durumsuz (Shared Mutable State içermeyen) nesneler doğrudan thread-safe'dir.
 // Bir sınıfın shared state değişkenlerininin hepsi immutable ise bu sınıfta thread-safe'dir.

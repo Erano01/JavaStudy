@@ -1,4 +1,4 @@
-package me.erano.com.concurrent.fmentals.safety;
+package me.erano.com.jcip.concurrent.fmentals.safety;
 
 import net.jcip.annotations.GuardedBy;
 import net.jcip.annotations.ThreadSafe;

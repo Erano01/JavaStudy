@@ -1,4 +1,4 @@
-package me.erano.com.concurrent.fmentals.sharing.util;
+package me.erano.com.jcip.concurrent.fmentals.sharing.util;
 
 public class EventSource {
 

@@ -1,4 +1,4 @@
-package me.erano.com.concurrent.fmentals.sharing;
+package me.erano.com.jcip.concurrent.fmentals.sharing;
 
 import net.jcip.annotations.Immutable;
 

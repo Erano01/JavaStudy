@@ -1,4 +1,4 @@
-package me.erano.com.concurrent.fmentals.sharing;
+package me.erano.com.jcip.concurrent.fmentals.sharing;
 
 // Listing 3.1. Sharing Variables without Synchronization. Don't Do this.
 public class NoVisibility {

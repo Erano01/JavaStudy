@@ -1,4 +1,4 @@
-package me.erano.com.concurrent.fmentals.sharing;
+package me.erano.com.jcip.concurrent.fmentals.sharing;
 
 // Listing 3.15. Class at Risk of Failure if Not Properly Published.
 public class Holder {

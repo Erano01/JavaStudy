@@ -1,23 +1,18 @@
-package me.erano.com.concurrent.fmentals.safety;
+package me.erano.com.jcip.concurrent.fmentals.safety;
 
 import net.jcip.annotations.ThreadSafe;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
-// Immutability için tüm fieldların final olması yetmez, construction aşamasında "this" referansının escape edilmemesi gerekir.
+// Durumsuz Sınıf (Stateless Class) örneği: StatelessFactorizer
+// Bu sınıf, shared mutable state değişkenleri içermediği için thread-safe olarak kabul edilir.
 @ThreadSafe
-public class AtomicSingleStateFactorizer {
-    private final AtomicLong count = new AtomicLong(0);
-
-    public long getCount() { return count.get(); }
+public class StatelessFactorizer {
 
     public BigInteger[] service(BigInteger input) {
-        BigInteger[] factors = factor(input);
-        count.incrementAndGet();
-        return factors;
+        return factor(input);
     }
 
     private BigInteger[] factor(BigInteger n) {
