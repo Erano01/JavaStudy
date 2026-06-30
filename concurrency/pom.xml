@@ -15,6 +15,7 @@
     <modules>
         <module>single-threaded-dispatcher</module>
         <module>thread-safety</module>
+        <module>p1fundamentals</module>
     </modules>
 
     <properties>

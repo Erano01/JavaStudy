@@ -17,4 +17,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <modules>
+        <module>greedy</module>
+        <module>sorting</module>
+        <module>searching</module>
+        <module>data-structures</module>
+        <module>recursion</module>
+        <module>divide-and-conquer</module>
+        <module>graphs</module>
+        <module>dynamic-programming</module>
+        <module>backtracking</module>
+        <module>tree</module>
+    </modules>
 </project>
