@@ -10,7 +10,7 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>p2structuring</artifactId>
+    <artifactId>p3-JCiP-liveness-performance-testing</artifactId>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>

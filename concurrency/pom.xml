@@ -14,9 +14,9 @@
 
     <modules>
         <module>single-threaded-dispatcher</module>
-        <module>p1fundamentals</module>
-        <module>p2structuring</module>
-        <module>p3liveness-performance-testing</module>
+        <module>p1-JCiP-fundamentals</module>
+        <module>p2-JCiP-structuring</module>
+        <module>p3-JCiP-liveness-performance-testing</module>
     </modules>
 
     <properties>

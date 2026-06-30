@@ -9,7 +9,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>p1fundamentals</artifactId>
+    <artifactId>p1-JCiP-fundamentals</artifactId>
 
     <properties>
         <maven.compiler.source>24</maven.compiler.source>
