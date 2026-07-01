@@ -8,6 +8,8 @@ import java.util.List;
 
 // Durumsuz Sınıf (Stateless Class) örneği: StatelessFactorizer
 // Bu sınıf, shared mutable state değişkenleri içermediği için thread-safe olarak kabul edilir.
+
+// Observe Listing 2.1. A Stateless Servlet
 @ThreadSafe
 public class StatelessFactorizer {
 

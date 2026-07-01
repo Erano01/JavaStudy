@@ -1,25 +1,22 @@
 package me.erano.com.jcip.concurrent.fmentals.safety;
 
-import net.jcip.annotations.ThreadSafe;
+import net.jcip.annotations.NotThreadSafe;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
-// Immutability için tüm fieldların final olması yetmez, construction aşamasında "this" referansının escape edilmemesi gerekir.
+// Listing 2.2. Class That Counts Requests without the Necessary Synchronization. Don't Do this.
+@NotThreadSafe
+public class UnsafeCountingFactorizer {
 
-// Listing 2.4. Servlet that Counts Requests Using AtomicLong.
-// Original name is CountingFactorizer, but I renamed it to AtomicSingleStateFactorizer.
-@ThreadSafe
-public class AtomicSingleStateFactorizer {
-    private final AtomicLong count = new AtomicLong(0);
+    private long count = 0;
+    public long getCount() { return count; }
 
-    public long getCount() { return count.get(); }
-
-    public BigInteger[] service(BigInteger input) {
-        BigInteger[] factors = factor(input);
-        count.incrementAndGet();
+    public BigInteger[] service(BigInteger number) {
+        BigInteger i = number;
+        BigInteger[] factors = factor(i);
+        ++count;
         return factors;
     }
 
