@@ -13,7 +13,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>single-threaded-dispatcher</module>
         <module>p1-JCiP-fundamentals</module>
         <module>p2-JCiP-structuring</module>
         <module>p3-JCiP-liveness-performance-testing</module>
