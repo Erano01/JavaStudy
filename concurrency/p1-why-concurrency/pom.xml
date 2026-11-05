@@ -9,13 +9,14 @@
         <version>1.0</version>
     </parent>
 
-    <groupId>me.erano.com.concurrent</groupId>
-    <artifactId>c1-MCiJ-intro</artifactId>
+    <groupId>me.erano.com.concurrency.p1</groupId>
+    <artifactId>p1-why-concurrency</artifactId>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
 </project>

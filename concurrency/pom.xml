@@ -14,9 +14,7 @@
 
     <modules>
         <module>p1-JCiP-fundamentals</module>
-        <module>p2-JCiP-structuring</module>
-        <module>p3-JCiP-liveness-performance-testing</module>
-        <module>c1-MCiJ-intro</module>
+        <module>p1-why-concurrency</module>
     </modules>
 
     <properties>

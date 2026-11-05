@@ -1,6 +1,5 @@
 package me.erano.com.jcip.concurrent.fmentals.sharing;
 
-import me.erano.com.concurrent.fmentals.sharing.util.*;
 import me.erano.com.jcip.concurrent.fmentals.sharing.util.Event;
 import me.erano.com.jcip.concurrent.fmentals.sharing.util.EventListener;
 import me.erano.com.jcip.concurrent.fmentals.sharing.util.EventSource;
