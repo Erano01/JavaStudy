@@ -1,4 +1,4 @@
-package me.erano.com.concurrency.p1;
+package me.erano.com.concurrency.why;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

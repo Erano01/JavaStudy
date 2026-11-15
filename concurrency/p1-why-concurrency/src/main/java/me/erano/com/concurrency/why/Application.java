@@ -1,4 +1,4 @@
-package me.erano.com.concurrency.p1;
+package me.erano.com.concurrency.why;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
