@@ -21,6 +21,6 @@
  *       çekirdekte aynı anda çalıştırarak cevabı daha hızlı alırsın.</li>
  * </ul>
  *
- * @see me.erano.com.concurrency.p1.VisitController framework'ün açtığı threadlerin bozduğu bir sayaç
+ * @see me.erano.com.concurrency.why.VisitController framework'ün açtığı threadlerin bozduğu bir sayaç
  */
-package me.erano.com.concurrency.p1;
+package me.erano.com.concurrency.why;
