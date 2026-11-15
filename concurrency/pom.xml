@@ -14,12 +14,14 @@
 
     <modules>
         <module>p1-why-concurrency</module>
-        <module>p2-resources-and-layers</module>
+        <module>p2-thinking-about-concurrency</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <jdk.version>27</jdk.version>
+        <maven.compiler.source>${jdk.version}</maven.compiler.source>
+        <maven.compiler.target>${jdk.version}</maven.compiler.target>
+        <maven.compiler.release>${jdk.version}</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -31,6 +33,26 @@
     -->
     <build>
         <plugins>
+            <!--
+                Maven hangi JDK ile çalışırsa çalışsın (JAVA_HOME), derleme ve Javadoc için
+                sistemde kurulu JDK'lar arasından uygun olanı otomatik seçer.
+                (/usr/lib/jvm, C:\Program Files\..., ~/.jdks, SDKMAN vb. taranır)
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-toolchains-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>select-jdk-toolchain</goal>
+                        </goals>
+                        <configuration>
+                            <version>[${maven.compiler.source},)</version>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -46,8 +68,8 @@
                             <packages>me.erano.com.concurrency.why*</packages>
                         </group>
                         <group>
-                            <title>p2-resources-and-layers</title>
-                            <packages>me.erano.com.concurrency.resandlays*</packages>
+                            <title>p2-thinking-about-concurrency</title>
+                            <packages>me.erano.com.concurrency.resources*</packages>
                         </group>
                     </groups>
                 </configuration>

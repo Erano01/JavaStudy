@@ -1,4 +1,4 @@
-package me.erano.com.concurrency.resandlays;
+package me.erano.com.concurrency.resources;
 
 public class Application {
 

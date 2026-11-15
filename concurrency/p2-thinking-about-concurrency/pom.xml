@@ -9,12 +9,14 @@
         <version>1.0</version>
     </parent>
 
-    <groupId>me.erano.com.concurrency.resandlays</groupId>
-    <artifactId>p2-resources-and-layers</artifactId>
+    <groupId>me.erano.com.concurrency.resources</groupId>
+    <artifactId>p2-thinking-about-concurrency</artifactId>
 
     <properties>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+        <jdk.version>27</jdk.version>
+        <maven.compiler.source>${jdk.version}</maven.compiler.source>
+        <maven.compiler.target>${jdk.version}</maven.compiler.target>
+        <maven.compiler.release>${jdk.version}</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
