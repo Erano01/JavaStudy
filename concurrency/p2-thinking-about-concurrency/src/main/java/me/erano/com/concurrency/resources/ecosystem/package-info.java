@@ -78,6 +78,6 @@
  *   </li>
  * </ol>
  *
- * @see me.erano.com.concurrency.resandlays.layers
+ * @see me.erano.com.concurrency.resources.layers
  */
-package me.erano.com.concurrency.resandlays.ecosystem;
+package me.erano.com.concurrency.resources.ecosystem;
