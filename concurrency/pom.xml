@@ -23,6 +23,34 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!--
+        Tüm alt modüllerin Javadoc'unu tek sitede birleştirir:
+            mvn javadoc:aggregate   (concurrency klasöründen)
+        Çıktı: concurrency/target/reports/apidocs
+        Yeni bir alt proje eklendiğinde aşağıdaki <groups> listesine bir <group> ekleyin.
+    -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.12.0</version>
+                <configuration>
+                    <doctitle>Concurrency Notes</doctitle>
+                    <windowtitle>Concurrency Notes</windowtitle>
+                    <overview>${project.basedir}/src/main/javadoc/overview.html</overview>
+                    <doclint>all,-missing</doclint>
+                    <groups>
+                        <group>
+                            <title>p1-why-concurrency</title>
+                            <packages>me.erano.com.concurrency.p1*</packages>
+                        </group>
+                    </groups>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 
 </project>
