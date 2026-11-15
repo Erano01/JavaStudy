@@ -18,8 +18,9 @@
     </modules>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <maven.compiler.source>27</maven.compiler.source>
+        <maven.compiler.target>27</maven.compiler.target>
+        <maven.compiler.release>27</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -31,6 +32,26 @@
     -->
     <build>
         <plugins>
+            <!--
+                Maven hangi JDK ile çalışırsa çalışsın (JAVA_HOME), derleme ve Javadoc için
+                sistemde kurulu JDK'lar arasından uygun olanı otomatik seçer.
+                (/usr/lib/jvm, C:\Program Files\..., ~/.jdks, SDKMAN vb. taranır)
+            -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-toolchains-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>select-jdk-toolchain</goal>
+                        </goals>
+                        <configuration>
+                            <version>[${maven.compiler.source},)</version>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>

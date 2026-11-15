@@ -13,7 +13,9 @@
     <artifactId>p1-why-concurrency</artifactId>
 
     <properties>
-        <maven.compiler.release>25</maven.compiler.release>
+        <maven.compiler.source>27</maven.compiler.source>
+        <maven.compiler.target>27</maven.compiler.target>
+        <maven.compiler.release>27</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>4.1.2</spring-boot.version>

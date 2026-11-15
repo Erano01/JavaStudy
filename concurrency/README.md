@@ -62,8 +62,8 @@ Windows'ta dosya tarayıcıda doğrudan açılır; sunucu gerekmez.
 
 ## Notlar
 
-- Maven Java 25'ten eski bir JDK ile çalışıyorsa build hata verir. Komutun başına
-  `JAVA_HOME=/usr/lib/jvm/java-25-openjdk` ekleyin (Linux) veya varsayılan JDK'yı 25 yapın.
+- `JAVA_HOME` ayarlamanıza gerek yok: `maven-toolchains-plugin` sistemde kurulu JDK'lar arasından
+  uygun sürümü (`maven.compiler.source` veya üstü) kendisi bulur. Sadece o sürümde bir JDK kurulu olmalı.
 - Ana sayfada paketler projelere göre gruplanır. Yeni bir alt proje eklediğinizde
   `concurrency/pom.xml`'deki `<groups>` listesine bir `<group>` ve `overview.html`'e bir satır ekleyin.
 - Tek bir projenin Javadoc'u için o projenin klasöründe `mvn javadoc:javadoc` çalıştırın.
