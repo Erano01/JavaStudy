@@ -46,6 +46,10 @@
                             <title>p1-why-concurrency</title>
                             <packages>me.erano.com.concurrency.why*</packages>
                         </group>
+                        <group>
+                            <title>p2-resources-and-layers</title>
+                            <packages>me.erano.com.concurrency.resandlays*</packages>
+                        </group>
                     </groups>
                 </configuration>
             </plugin>
